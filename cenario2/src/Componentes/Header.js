@@ -15,7 +15,7 @@ export default function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home" style={{color: "white", fontSize: "20px"}}>Home</Nav.Link>
-                        <Nav.Link href="#link" style={{color: "white", fontSize: "20px"}}>FAQ</Nav.Link>
+                        <Nav.Link href="#FAQ" style={{color: "white", fontSize: "20px"}}>FAQ</Nav.Link>
 
                     </Nav>
                 </Navbar.Collapse>

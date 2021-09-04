@@ -3,7 +3,6 @@
 }
 
 .body{
-    background-image: url(../Images/teste1.jpg);
     background-size: cover;
     font-family: Roboto;
     display: flex;
