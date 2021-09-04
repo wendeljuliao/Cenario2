@@ -23,9 +23,10 @@ export default class Card extends Component {
                         <div class="body">
                             <label class="title-card">{this.props.title}</label>
                             <label class="sub-card">{this.props.sub}</label>
-                        </div>            
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         )
