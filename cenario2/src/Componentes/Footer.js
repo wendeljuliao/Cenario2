@@ -1,8 +1,14 @@
+import { useState, useEffect } from 'react'
+
 import { Card, Button } from 'react-bootstrap'
 
+var meses = new Array("Janeiro", "Feveiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+
 export default function Footer() {
+    const [date, setDate] = useState(new Date());
 
     return (
+
         <footer class="bg-dark text-center text-white">
             <div class="container p-4">
                 <section class="mb-4">
@@ -18,7 +24,7 @@ export default function Footer() {
                 </section>
 
                 <section class="">
-                    <div class="row" style={{justifyContent: 'center'}}>
+                    <div class="row" style={{ justifyContent: 'center' }}>
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                             <h5 class="text-uppercase">Links</h5>
 
@@ -61,7 +67,8 @@ export default function Footer() {
             </div>
 
             <div class="text-center p-3" style={{ background: "black" }}>
-                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+
+                <label class="text-white">{date.getDate() + " de " + meses[date.getMonth()] + " de " + date.getFullYear()}</label>
             </div>
         </footer>
     )
