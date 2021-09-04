@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 export default function Header() {
 
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="black" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" height="50px" />

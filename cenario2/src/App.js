@@ -13,7 +13,11 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path="/" component={Card} />
+        <Route exact path="/">
+          <Card title="Lorem Ipsum" sub="Lorem Ipsum amet."/>
+          <Card title="Lorem Ipsum" sub="Lorem Ipsum amet."/>
+          <Card title="Lorem Ipsum" sub="Lorem Ipsum amet."/>
+        </Route>
         <Route path="/faq" component={FAQ} />
       </Switch>
 
