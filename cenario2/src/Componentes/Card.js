@@ -17,7 +17,7 @@ export default class Card extends Component {
 
     render(){
         return(
-            <div class="body" style="">
+            <div class="body" >
                 <label class="title-card">{this.props.title}</label>
                 <label class="sub-card">{this.props.sub}</label>
             </div>

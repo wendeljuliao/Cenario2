@@ -9,7 +9,7 @@ import Card from './Componentes/Card'
 function App() {
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="black" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" height="50px" />
@@ -34,8 +34,10 @@ function App() {
       <div class="escopo-primary">
         <div class="escopo-secundary">
           <div class="line">
-            <Card title="Relou" sub="reloureçpirelou" bgimg=""/>
-            <label class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dui eleifend, pharetra elit in, ullamcorper tortor. Phasellus vulputate nisi vel leo placerat, ac convallis magna lobortis. Suspendisse lacinia condimentum vehicula. </label>
+            <Card title="Relou" sub="reloureçpirelou" bgimg="../Images/teste.jpg"/>
+            <div>
+              <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dui eleifend, pharetra elit in, ullamcorper tortor. Phasellus vulputate nisi vel leo placerat, ac convallis magna lobortis. Suspendisse lacinia condimentum vehicula. </span>
+            </div>
           </div>
         </div>
       </div>
