@@ -4,8 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
-import Card from 'react-bootstrap/Card'
-
+import Card from './Componentes/Card'
 
 function App() {
   return (
@@ -32,30 +31,10 @@ function App() {
         </Container>
       </Navbar>
 
-      <Card className="bg-dark text-white" style={{ 
-        width: '300px', 
-        height: '300px',
-        boxShadow: 'inset 0px -124px 50px -57px black'
-        }}>
-        <Card.Img src="https://images5.alphacoders.com/876/thumb-350-876590.png" alt="Card image" />
-        <Card.ImgOverlay>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </Card.Text>
-          <Card.Text>Last updated 3 mins ago</Card.Text>
-        </Card.ImgOverlay>
-      </Card>
-
-      <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
-      </Card>
+      <Card title="Relou" sub="reloureçpirelou" />
+      <Card title="Relou" sub="reloureçpirelou" />
+      <Card title="Relou" sub="reloureçpirelou" />
+      
     </div>
   );
 }

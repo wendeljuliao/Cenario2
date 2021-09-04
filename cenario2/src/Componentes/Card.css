@@ -1,0 +1,27 @@
+:root{
+    --coisa: #ffffff;
+}
+
+.body{
+    background-image: url(../Images/teste.jpg);
+    background-size: cover;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 400px;
+    height: 270px;
+    box-shadow: inset 0px -170px 50px -50px rgba(0, 0, 0, 0.849);
+}
+
+.body .title-card{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.body .sub-card{
+    font-size: 18px;
+    font-weight: normal;
+}
