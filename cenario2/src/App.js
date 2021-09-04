@@ -33,6 +33,12 @@ function App() {
 
       <div class="escopo-primary">
         <div class="escopo-secundary">
+        <div class="line">
+            <Card title="Relou" sub="reloureçpirelou" bgimg="../Images/teste.jpg"/>
+            <div>
+              <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dui eleifend, pharetra elit in, ullamcorper tortor. Phasellus vulputate nisi vel leo placerat, ac convallis magna lobortis. Suspendisse lacinia condimentum vehicula. </span>
+            </div>
+          </div>
           <div class="line">
             <Card title="Relou" sub="reloureçpirelou" bgimg="../Images/teste.jpg"/>
             <div>
