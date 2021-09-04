@@ -31,10 +31,15 @@ function App() {
         </Container>
       </Navbar>
 
-      <Card title="Relou" sub="reloureçpirelou" />
-      <Card title="Relou" sub="reloureçpirelou" />
-      <Card title="Relou" sub="reloureçpirelou" />
-      
+      <div class="escopo-primary">
+        <div class="escopo-secundary">
+          <div class="line">
+            <Card title="Relou" sub="reloureçpirelou" bgimg=""/>
+            <label class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at dui eleifend, pharetra elit in, ullamcorper tortor. Phasellus vulputate nisi vel leo placerat, ac convallis magna lobortis. Suspendisse lacinia condimentum vehicula. </label>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
