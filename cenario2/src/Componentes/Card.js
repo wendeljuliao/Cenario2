@@ -21,7 +21,7 @@ export default class Card extends Component {
             <div class="escopo-primary">
                 <div class="escopo-secundary">
                     <div class="line">
-                        <div class="body" style={{backgroundImage: this.props.bgimg}}>
+                        <div class="body" style={{backgroundImage: `url(${this.props.bgimg})`}}>
                             <label class="title-card">{this.props.title}</label>
                             <label class="sub-card">{this.props.sub}</label>
                         </div>

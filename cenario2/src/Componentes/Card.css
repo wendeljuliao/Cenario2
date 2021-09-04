@@ -3,7 +3,9 @@
 }
 
 .body{
-    background-size: cover;
+    background-color: black !important;
+    background: no-repeat center;
+    background-size: contain;
     font-family: Roboto;
     display: flex;
     flex-direction: column;
