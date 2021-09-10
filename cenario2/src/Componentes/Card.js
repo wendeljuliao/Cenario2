@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "react-bootstrap";
 import "./Card.css";
+import video from "../Images/video.mp4"
+import { position } from "dom-helpers";
 
 export default class Card extends Component {
 
@@ -22,6 +24,9 @@ export default class Card extends Component {
                 <div class="escopo-secundary">
                     <div class="line">
                         <div class="body" style={{backgroundImage: `url(${this.props.bgimg})`}}>
+                            <video autoPlay muted>
+                                <source src={video} type="video/mp4"/>
+                            </video>
                             <label class="title-card">{this.props.title}</label>
                             <label class="sub-card">{this.props.sub}</label>
                         </div>

@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-import Image from './Images/teste.jpg'
+import Image from './Images/teste3.jpg'
 import Image2 from './Images/teste1.jpg'
 import Image3 from './Images/teste2.jpg'
 import Card from './Componentes/Card'
