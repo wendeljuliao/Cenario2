@@ -55,13 +55,16 @@
     background-size: cover;
     color: #1ab26b;
     height: 300px;
-    box-shadow: inset 0px -121px 40px 20px rgb(0 0 0);;
+    box-shadow: inset 0px -121px 40px 20px rgb(0 0 0);
+    cursor: pointer;
 }
 
 .escopo-secundary .line:hover .title-card{
     font-size: 35px;
+    cursor: pointer;
 }
 
 .escopo-secundary .line:hover .sub-card{
     font-size: 21px;
+    cursor: pointer;
 }

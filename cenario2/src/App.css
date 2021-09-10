@@ -26,3 +26,7 @@
   border-radius: 10px;
   transition: 0.4s;
 }
+
+.escopo-secundary ,.description{
+  cursor: pointer;
+}
