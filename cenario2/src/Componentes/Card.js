@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "react-bootstrap";
 import "./Card.css";
+import "./Popup";
 import video from "../Images/video.mp4"
 import { position } from "dom-helpers";
 
@@ -20,10 +21,9 @@ export default class Card extends Component {
     
     render() {
         return (
-            <a onClick={function() {document.getElementById("popup").style.display = 'flex'}}>
                 <div class="escopo-primary">
                     <div class="escopo-secundary">
-                        <div class="line">
+                        <div class="line" onClick={function() {document.getElementById("popup").style.display = 'flex'}}>
                             <div class="body" style={{backgroundImage: `url(${this.props.bgimg})`}}>
                                 <video autoPlay muted>
                                     <source src={video} type="video/mp4"/>
@@ -35,7 +35,6 @@ export default class Card extends Component {
                         </div>
                     </div>
                 </div>
-            </a>
         )
     }
 }
