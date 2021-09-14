@@ -2,6 +2,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import './Header.css'
+import { Link } from "react-router-dom"
 
 export default function Header() {
 
@@ -14,6 +15,7 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor: "rgb(26 178 107);"}}/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
+                        <Link></Link>
                         <Nav.Link href="App.js" style={{color: "white", fontSize: "20px"}}>Home</Nav.Link>
                         <Nav.Link href='#' style={{color: "white", fontSize: "20px"}}>FAQ</Nav.Link>
                     </Nav>
