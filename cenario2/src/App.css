@@ -24,10 +24,9 @@
   margin: 5px 10px;
   color: white;
   border-radius: 10px;
-  /*border-bottom: 1px solid rgb(46, 46, 46);*/
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
-.escopo-secundary .line:hover{
-  background-color: #414141;
+.escopo-secundary ,.description{
+  cursor: pointer;
 }

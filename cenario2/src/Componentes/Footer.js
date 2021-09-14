@@ -24,43 +24,45 @@ export default function Footer() {
                 </section>
 
                 <section class="">
-                    <div class="row" style={{ justifyContent: 'center' }}>
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="row" style={{ justifyContent: 'center'}}>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
                             <h5 class="text-uppercase">Links</h5>
-
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a href="#!" class="text-white">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Link 4</a>
-                                </li>
-                            </ul>
+                            <div style={{width:'fit-content'}}>
+                                <ul class="list-unstyled mb-0" style={{alignItems: 'flex-start', display: 'flex', flexDirection: 'column'}}>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 4</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
                             <h5 class="text-uppercase">Links</h5>
-
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a href="#!" class="text-white">Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Link 4</a>
-                                </li>
-                            </ul>
+                            <div style={{width:'fit-content'}}>
+                                <ul class="list-unstyled mb-0" style={{alignItems: 'flex-start', display: 'flex', flexDirection: 'column'}}>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="text-white" style={{textDecoration: 'none'}}>Link 4</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>

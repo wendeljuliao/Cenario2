@@ -1,7 +1,7 @@
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
+import './Header.css'
 
 export default function Header() {
 
@@ -14,9 +14,8 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor: "rgb(26 178 107);"}}/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home" style={{color: "white", fontSize: "20px"}}>Home</Nav.Link>
-                        <Nav.Link href="#FAQ" style={{color: "white", fontSize: "20px"}}>FAQ</Nav.Link>
-
+                        <Nav.Link href="App.js" style={{color: "white", fontSize: "20px"}}>Home</Nav.Link>
+                        <Nav.Link href="../faq.js" style={{color: "white", fontSize: "20px"}}>FAQ</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

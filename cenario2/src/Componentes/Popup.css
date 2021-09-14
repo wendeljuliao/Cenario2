@@ -1,0 +1,58 @@
+
+.popup-bg{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #00000080;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    transition: 0.3s;
+}
+
+.popup-bg .escopo-popup{
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    height: 700px;
+    width: 800px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    align-items: flex-end;
+}
+
+.escopo-popup video{
+    height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.escopo-popup .title-popup{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 10px;
+    color: white;
+}
+
+.escopo-popup .sub-popup{
+    padding: 10px 10px;
+    color: white;
+}
+
+.escopo-popup a{
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    background-image: url("../Images/close_icon.png");
+    background-size: contain;
+    color: white;
+    transition: 0.2s;
+}
+
+.escopo-popup a:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid white;
+}
