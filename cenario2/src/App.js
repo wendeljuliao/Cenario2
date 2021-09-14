@@ -24,11 +24,14 @@ function App() {
           <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image3}/>
           <Popup/>
         </Route>
+
         <Route path="/faq" component={FAQ} />
+        
       </Switch>
 
       <Footer />
     </Router>
+    
   );
 }
 
