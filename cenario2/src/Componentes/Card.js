@@ -22,7 +22,7 @@ export default class Card extends Component {
     }
 
     teste() {
-        document.getElementById("popup").style.display = 'flex'
+        document.getElementById("popup"+this.props.num).style.display = 'flex'
             
     }
 
@@ -36,7 +36,7 @@ export default class Card extends Component {
                             <video autoPlay muted>
                                 <source src={video} type="video/mp4" />
                             </video>
-                            <label class="title-card">{this.props.title}</label>
+                            <label class="title-card">{this.props.title + this.props.num}</label>
                             <label class="sub-card">{this.props.sub}</label>
                         </div>
                         <label class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et.</label>
