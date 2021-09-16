@@ -3,7 +3,6 @@ import { ThemeProvider } from "react-bootstrap";
 import "./Card.css";
 import "./Popup";
 import video from "../Images/video.mp4"
-import { position } from "dom-helpers";
 
 export default class Card extends Component {
 

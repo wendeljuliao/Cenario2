@@ -19,7 +19,7 @@ export default function Header() {
                     <Nav className="me-auto">
 
                         <Nav.Link style={{ color: "white", fontSize: "20px"}}><Link to="/" style={{textDecoration: "none", color: "white"}}>Home</Link></Nav.Link>
-                        <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/faq" style={{textDecoration: "none", color: "white"}}>Faq</Link></Nav.Link>
+                        <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/faq" style={{textDecoration: "none", color: "white"}}>FAQ</Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
