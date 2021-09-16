@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "react-bootstrap";
 import "./Card.css";
-import "./Popup";
+import Popup from "./Popup";
 import video from "../Images/video.mp4"
 
 export default class Card extends Component {
@@ -33,6 +33,8 @@ export default class Card extends Component {
                             <label class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et.</label>
                         </div>
                     </div>
+                    <Popup title={"Lorem Ipsum" + this.props.num} sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et." />
+
                 </div>
         )
     }

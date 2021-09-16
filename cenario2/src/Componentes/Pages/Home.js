@@ -12,12 +12,9 @@ export default class Home extends Component {
     render() {
         return (
             <>
-                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image} />
-                <Popup title="Lorem Ipsum1" sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et." />
-                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image2} />
-                <Popup title="Lorem Ipsum2" sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et." />
-                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image3} />
-                <Popup title="Lorem Ipsum3" sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non nisl quis magna vehicula blandit. Sed vitae mattis diam. Aenean dapibus nibh tellus, vitae pretium metus sollicitudin et." />
+                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image} num="1" />
+                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image2} num="2" />
+                <Card title="Lorem Ipsum" sub="Lorem Ipsum amet." bgimg={Image3} num="3" />
             </>
         )
     }

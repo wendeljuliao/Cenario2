@@ -19,7 +19,7 @@ export default class Popup extends Component{
     render() {
         return (
             
-            <div class="popup-bg" id="popup" >
+            <div class="popup-bg" id={"popup"} >
                 <div class="escopo-popup">
                     <video muted autoPlay loop>
                         <source src={video} type="video/mp4"/>
