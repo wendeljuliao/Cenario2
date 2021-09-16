@@ -1,22 +1,12 @@
 import './Faq.css'
-import React, { Component } from "react";
 
-
-export default class FAQ extends Component {
+export default function Header() {
     
-    click() {
-        var elemento = document.getElementById("ites-faq1")   
-        if(elemento.style.display == "flex")
-            elemento.style = "display: none;";
-        else
-            elemento.style = "display: flex;"
-    }
 
-    render() {
-        return (
-                <nav class="lista-faq">
+    return (
+            <nav class="lista-faq">
                 <ul>
-                    <li id="li" onClick= {this.click}>
+                    <li>
                         <a class="assunto-faq1" href="javascript://">Dúvidas frequentes sobre o COVID-19<svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -96,7 +86,5 @@ export default class FAQ extends Component {
                     </li>
                 </ul>
             </nav>
-        )
-    }
-    
+    )
 }
