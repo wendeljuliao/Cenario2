@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import Card from '../Card'
-import Popup from "../Popup";
 import video1 from '../../Images/video1.mp4'
 import video2 from '../../Images/video2.mp4'
 import video3 from '../../Images/video3.mp4'
