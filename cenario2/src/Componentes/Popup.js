@@ -1,5 +1,4 @@
 import './Popup.css'
-import video from '../Images/video.mp4'
 import { Component } from 'react';
 
 export default class Popup extends Component {
@@ -13,6 +12,7 @@ export default class Popup extends Component {
             sub_valor: "",
             bgimg_valor: "",
             id_valor: "",
+            video_valor: "",
         }
     }
 
@@ -27,7 +27,7 @@ export default class Popup extends Component {
             <div class="popup-bg" id={"popup" + this.props.id} >
                 <div class="escopo-popup">
                     <video muted autoPlay loop>
-                        <source src={video} type="video/mp4" />
+                        <source src={this.props.video} type="video/mp4" />
                     </video>
                     <a href="#" id="close" onClick={this.teste}></a>
                     <div style={{ width: '100%' }}>
@@ -36,7 +36,6 @@ export default class Popup extends Component {
                     </div>
                 </div>
             </div>
-
 
         )
     }
