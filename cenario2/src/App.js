@@ -7,6 +7,7 @@ import Footer from './Componentes/Footer'
 import Github from './Componentes/Pages/Github';
 import Home from './Componentes/Pages/Home'
 import FAQ from './Componentes/Pages/FAQ'
+import Formulario from './Componentes/Pages/Formulario'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/faq" component={FAQ} />
 
         <Route path="/git" component={Github} />
+
+        <Route path="/formulario" component={Formulario} />
         
       </Switch>
 
