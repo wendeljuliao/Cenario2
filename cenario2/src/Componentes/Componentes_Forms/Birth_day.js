@@ -1,5 +1,4 @@
 import React from 'react'
-import Spotify_Logo from '../Componentes_Forms/Imagens/Spotify_Logo.png'
 
 export default function Birth_day() {
     return (

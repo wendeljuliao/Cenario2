@@ -1,14 +1,14 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-import Header from './Componentes/Header';
-import Footer from './Componentes/Footer'
+import Header from './Componentes/js/Header';
+import Footer from './Componentes/js/Footer'
 
 
-import Github from './Componentes/Pages/Github';
-import Home from './Componentes/Pages/Home'
-import FAQ from './Componentes/Pages/FAQ'
-import Formulario from './Componentes/Pages/Formulario';
+import Github from './Componentes/Pages/js/Github';
+import Home from './Componentes/Pages/js/Home'
+import FAQ from './Componentes/Pages/js/FAQ'
+import Formulario from './Componentes/Pages/js/Formulario';
 
 
 function App() {

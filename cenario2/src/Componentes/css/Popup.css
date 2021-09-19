@@ -45,7 +45,7 @@
     position: absolute;
     height: 26px;
     width: 26px;
-    background-image: url("../Images/close_icon.png");
+    background-image: url("../../Images/close_icon.png");
     background-size: contain;
     color: white;
     transition: 0.2s;

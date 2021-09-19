@@ -1,9 +1,9 @@
-import Birth_day from '../Componentes_Forms/Birth_day';
-import Label_Input from '../Componentes_Forms/Label_Input';
-import Radio_Box from '../Componentes_Forms/Radio_Box';
-import Title from '../Componentes_Forms/Title';
-import CheckBox from '../Componentes_Forms/CheckBox';
-import '../../App.css'
+import Birth_day from '../../Componentes_Forms/Birth_day';
+import Label_Input from '../../Componentes_Forms/Label_Input';
+import Radio_Box from '../../Componentes_Forms/Radio_Box';
+import Title from '../../Componentes_Forms/Title';
+import CheckBox from '../../Componentes_Forms/CheckBox';
+import '../../../App.css'
 
 
 function Formulario() {

@@ -1,6 +1,6 @@
-import './Faq.css'
+import './../css/Faq.css'
 import React, { Component } from "react";
-import Pergunta from '../Pergunta';
+import Pergunta from '../../js/Pergunta';
 
 export default class FAQ extends Component {
 

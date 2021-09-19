@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { ThemeProvider } from "react-bootstrap";
-import "./Card.css";
+import "./../css/Card.css";
 import Popup from "./Popup";
 
 export default class Card extends Component {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Spotify_Logo from '../Componentes_Forms/Imagens/Spotify_Logo.png'
+import Spotify_Logo from './../../Images/Spotify_Logo.png'
 
 export default function Cadastro() {
     return (

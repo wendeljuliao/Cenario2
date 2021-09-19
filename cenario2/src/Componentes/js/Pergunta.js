@@ -1,4 +1,4 @@
-import './Pergunta.css'
+import './../css/Pergunta.css'
 import React, { Component } from "react";
 
 

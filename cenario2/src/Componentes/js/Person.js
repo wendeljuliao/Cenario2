@@ -1,4 +1,4 @@
-import './Person.css'
+import './../css/Person.css'
 import React, { Component } from "react";
 
 

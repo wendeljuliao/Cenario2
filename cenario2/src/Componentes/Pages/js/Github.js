@@ -1,13 +1,13 @@
-import './Github.css';
-import Person from '../Person.js'
-import logo from '../../Images/git-logo.png'
+import './../css/Github.css';
+import Person from '../../js/Person'
+import logo from '../../../Images/git-logo.png'
 
-import gabriel from '../../Images/teste1.jpg'
-import wendel from '../../Images/teste2.jpg'
-import paulo from '../../Images/teste3.jpg'
-import gabriel1 from '../../Images/jg.jpg'
-import wendel2 from '../../Images/wj.jpg'
-import paulo3 from '../../Images/ph.jpg'
+import gabriel from '../../../Images/teste1.jpg'
+import wendel from '../../../Images/teste2.jpg'
+import paulo from '../../../Images/teste3.jpg'
+import gabriel1 from '../../../Images/jg.jpg'
+import wendel2 from '../../../Images/wj.jpg'
+import paulo3 from '../../../Images/ph.jpg'
 
 function Github() {
   return (
