@@ -1,0 +1,148 @@
+.logo{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+div.elements {
+    display: block;
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 6px;
+}
+
+
+div.inside_elements1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.inside_elements2{
+    display: flex; 
+    width: 415px; 
+    align-items: center;
+}
+
+input.text_box {
+    color: black;
+    box-sizing: border-box;
+    width: 415px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+div.title{
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 30px;
+}
+
+div.SideBox_Names{
+    width: 415px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.ins {
+    display: block;
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+div.ins3 {
+    padding-right: 40px;
+}
+
+div.side_elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display:flex; 
+    flex-direction:row;
+}
+
+div.side{
+    display:flex; 
+    flex-direction:row;
+    
+}
+
+.row1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1.nascimento-area{
+    width: 415px;
+    display: flex;
+    justify-content: space-between;
+}
+.nascimento-area .nascimento-obj{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px;
+}
+.nascimento-area .nascimento-obj select{
+    color: black;
+    height: 40px;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.nascimento-area .nascimento-obj input{
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid black;
+    width: 120px;
+}
+
+.checkbox{
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+input.inscrevase {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    color: black;
+    background-color: #26C77B;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 24px;
+    display: inline-block;
+}
+
+button.facebook {
+    background-color: #1C72EC;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 24px;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p.ou {
+    color: gray;
+    font-size: smaller;
+}
