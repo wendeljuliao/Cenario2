@@ -106,6 +106,10 @@ div.side{
     border: 1px solid black;
     border-radius: 4px;
 }
+
+.nascimento-input-option {
+    color: black;
+}
 .nascimento-area .nascimento-obj input{
     color: black;
     border: 1px solid black;

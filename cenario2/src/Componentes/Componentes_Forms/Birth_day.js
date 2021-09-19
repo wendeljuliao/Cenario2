@@ -23,19 +23,19 @@ export default function Birth_day() {
                         <div className='nascimento-obj'>
                             <label className='nascimento-label'>Mês</label>
                             <select className='nascimento-input' type="text" >
-                                <option>Mês</option>
-                                <option>Janeiro</option>
-                                <option>Fevereiro</option>
-                                <option>Março</option>
-                                <option>Abril</option>
-                                <option>Maio</option>
-                                <option>Junho</option>
-                                <option>Julho</option>
-                                <option>Agosto</option>
-                                <option>Setembro</option>
-                                <option>Outubro</option>
-                                <option>Novembro</option>
-                                <option>Dezembro</option>
+                                <option className='nascimento-input-option'>Mês</option>
+                                <option className='nascimento-input-option'>Janeiro</option>
+                                <option className='nascimento-input-option'>Fevereiro</option>
+                                <option className='nascimento-input-option'>Março</option>
+                                <option className='nascimento-input-option'>Abril</option>
+                                <option className='nascimento-input-option'>Maio</option>
+                                <option className='nascimento-input-option'>Junho</option>
+                                <option className='nascimento-input-option'>Julho</option>
+                                <option className='nascimento-input-option'>Agosto</option>
+                                <option className='nascimento-input-option'>Setembro</option>
+                                <option className='nascimento-input-option'>Outubro</option>
+                                <option className='nascimento-input-option'>Novembro</option>
+                                <option className='nascimento-input-option'>Dezembro</option>
                             </select>
                         </div>
                         <div class="nascimento-obj">
