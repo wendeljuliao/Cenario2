@@ -23,7 +23,7 @@ function App() {
 
         <Route path="/git" component={Github} />
 
-        <Route path="/Cadastro" component={Formulario} />
+        <Route path="/cadastro" component={Formulario} />
 
       </Switch>
 

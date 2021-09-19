@@ -38,6 +38,9 @@ export default function Footer() {
                                     <li>
                                         <Link to="/faq" style={{ textDecoration: "none", color: "white" }}>FAQ</Link>
                                     </li>
+                                    <li>
+                                        <Link to="/cadastro" style={{ textDecoration: "none", color: "white" }}>Cadastro</Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
