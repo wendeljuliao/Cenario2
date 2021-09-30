@@ -9,6 +9,7 @@ import Github from './Componentes/Pages/js/Github';
 import Home from './Componentes/Pages/js/Home'
 import FAQ from './Componentes/Pages/js/FAQ'
 import Formulario from './Componentes/Pages/js/Formulario';
+import Playlist from './Componentes/Pages/js/Playlist';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route path="/git" component={Github} />
 
         <Route path="/cadastro" component={Formulario} />
+
+        <Route path="/playlist/:id" component={Playlist} />
 
       </Switch>
 

@@ -11,6 +11,7 @@ import Image from '../../../Images/teste3.jpg'
 import Image2 from '../../../Images/teste1.jpg'
 import Image3 from '../../../Images/teste2.jpg'
 import playlist from "../../../playlist";
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
 
@@ -24,7 +25,7 @@ export default class Home extends Component {
 
                             {playlist.map((item) => {
                                 return (
-                                    <Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} />
+                                    <Link to={`/playlist/${item.id}`}><Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} /></Link>
                                 )
                             }
                             )}
