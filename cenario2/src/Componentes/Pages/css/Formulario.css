@@ -1,0 +1,13 @@
+.inputField{
+    margin: 10px 0;
+}
+
+.inputField input{
+    border-bottom: 1px solid #2e2e2e !important;
+    padding: 3px 5px;
+}
+
+
+.inputField input:focus-visible{
+    outline: 0;
+}
