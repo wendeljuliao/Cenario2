@@ -5,7 +5,7 @@ export default function Cadastro() {
     return (
         <div>
             <img src={Spotify_Logo} />
-            <strong>Inscreva-se grátis e comece a <br /> curtir.</strong>
+            <strong>Inscreva-se grátis e comece meu deus a <br /> curtir.</strong>
         </div>
     )
 }
