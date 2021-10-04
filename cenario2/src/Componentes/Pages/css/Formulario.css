@@ -11,3 +11,12 @@
 .inputField input:focus-visible{
     outline: 0;
 }
+
+div.elementsFundo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    text-align: center;
+}

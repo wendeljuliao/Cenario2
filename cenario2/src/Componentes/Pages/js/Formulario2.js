@@ -5,17 +5,29 @@ import CheckBox from '../../Componentes_Forms/CheckBox';
 import '../../../App.css'
 import '../css/Formulario.css'
 
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Label_Input from '../../Componetes_Forms2/Label_Input2';
 
 
 const Formulario2 = () =>{
 
-  const {register,handleSubmit} = useForm() 
+  var n =  new Date();
+  var year = n.getFullYear();
+
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const [result] = useState(""); //setResult
+  //const onSubmit = (data) => setResult(JSON.stringify(data));
 
   const novo_usuario = (data_usuario) => {
-    console.log(data_usuario)
+    if(data_usuario.email == data_usuario.email_c){
+      console.log("sim")
+      console.log(data_usuario)
+    }else{
+      //procurar um jeito de colocar um negocio... pop up ou chamar o erro apos o input
+      console.log("no")
+    }
   };
 
 return (
@@ -24,25 +36,36 @@ return (
             <Title />
             <div className='ins' className="escopo-secundary">
                 <form action="/action_page.php" onSubmit={handleSubmit(novo_usuario)}>
-                <Label_Input title='Qual é o seu e-mail?' type='email' register={}/>
+                  <div className="inputField d-flex align-items-start flex-column">
+                    <label> Qual o seu Email?</label>
+                    
+                    <input type="email" {...register("email",{required: true})} class="bg-transparent border-0" style={{width: "100%"}}  />
+
+                  </div>
                   <div className="inputField d-flex align-items-start flex-column">
                     <label>Confirme seu E-mail</label>
-                    <input type="email" class="bg-transparent border-0" style={{width: "100%"}}/>
+                    <input type="email" {...register("email_c",{required: true})} class="bg-transparent border-0" style={{width: "100%"}}/>
                   </div>
                   <div className="inputField d-flex align-items-start flex-column">
                     <label>Crie uma senha</label>
-                    <input type="password" class="bg-transparent border-0" style={{width: "100%"}}/>
+
+                    <input type="password" {...register("Senha",{required: true})} class="bg-transparent border-0" style={{width: "100%"}}/>
+
                   </div>
                   <div className="inputField d-flex align-items-start flex-column">
+
                     <label>Como devemos chamar você</label>
-                    <input class="bg-transparent border-0" style={{width: "100%"}}/>
+
+                    <input class="bg-transparent border-0" {...register("Nome",{ required: true, minLength:4, maxLength: 20})} style={{width: "100%"}}/>
+
                   </div>
+
                   <div className="inputField d-flex align-items-start flex-column">
                     <label>Data de nascimento</label>
                     <div className="d-flex justify-content-center flex-row">
-                      <input class="bg-transparent border-0" type="text" style={{width: "100%"}}/>
-                      <select class="bg-transparent border-0 mx-3" style={{width: "100%"}}>
-                        <option className='nascimento-input-option'>Mês</option>
+                      <input class="bg-transparent border-0" type="text" {...register("Dia",{required: true, min:1,max:31})} style={{width: "100%"}}/>
+                      <select class="bg-transparent border-0 mx-3" {...register("Mes",{required: true})} style={{width: "100%"}}>
+                        <option className='nascimento-input-option' value="" disabled selected>Mês</option>
                         <option className='nascimento-input-option'>Janeiro</option>
                         <option className='nascimento-input-option'>Fevereiro</option>
                         <option className='nascimento-input-option'>Março</option>
@@ -56,7 +79,7 @@ return (
                         <option className='nascimento-input-option'>Novembro</option>
                         <option className='nascimento-input-option'>Dezembro</option>
                       </select>
-                      <input class="bg-transparent border-0" type="text" style={{width: "100%"}}/>
+                      <input class="bg-transparent border-0" type="text" {...register("Ano",{required: true, min:1800,max:(year-18)})} style={{width: "100%"}}/>
                     </div>
                   </div>
                   <div className="inputField d-flex align-items-start flex-column">
@@ -67,7 +90,7 @@ return (
                         <label className="m-1">Masculino</label>
                       </div>
                       <div className="d-flex align-items-center">  
-                        <input type="radio" name="sexo"/>
+                        <input  type="radio" name="sexo"/>
                         <label className="m-1">Feminino</label>
                       </div>
                       <div className="d-flex align-items-center">  
@@ -87,10 +110,22 @@ return (
                       <label for="marketing"> Eu concordo com os <a href="" style={{color: "#26C77B" }}>Termos e Condições de Uso do Spotify.</a></label>
                     </div>
                   </div>
-                  <button>alo</button>
+                </div>
+                <div className="elementsFundo">
+
+                  <p>{errors.Nome?.type === "required" && "Campo Obrigatorio"}</p>
+
+
+
+
+
+
+
+                </div>
+                <div className="elementsFundo">
+                  <input type="submit" style={{margin:12}} value="Inscreva-se" class="inscrevase" />
                 </div>
                 </form>
-                <input type="submit" style={{margin:12}} value="Inscreva-se" class="inscrevase" />
             </div>         
         </div>
     </div>
