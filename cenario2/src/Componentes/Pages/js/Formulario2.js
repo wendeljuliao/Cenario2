@@ -27,6 +27,8 @@ const Formulario2 = () => {
       window.alert("Salvo com sucesso.")
       console.log("sim")
       console.log(data_usuario)
+      users.push(data_usuario)
+      console.log(users)
     } else {
       //procurar um jeito de colocar um negocio... pop up ou chamar o erro apos o input
       console.log("no")
