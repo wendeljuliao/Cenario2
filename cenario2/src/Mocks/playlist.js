@@ -1,10 +1,10 @@
-import Image from './Images/teste3.jpg'
-import Image2 from './Images/teste1.jpg'
-import Image3 from './Images/teste2.jpg'
+import Image from './../Images/teste3.jpg'
+import Image2 from './../Images/teste1.jpg'
+import Image3 from './../Images/teste2.jpg'
 
-import video1 from './Images/video1.mp4'
-import video2 from './Images/video2.mp4'
-import video3 from './Images/video3.mp4'
+import video1 from './../musicas/Evil_Morty_Theme.mp3'
+import video2 from './../musicas/INDUSTRY_BABY.mp3'
+import video3 from './../musicas/Lofi_01.mp3'
 
 const playlist = [
     {

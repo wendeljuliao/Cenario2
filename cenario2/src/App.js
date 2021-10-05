@@ -9,8 +9,8 @@ import Github from './Componentes/Pages/js/Github';
 import Home from './Componentes/Pages/js/Home'
 import FAQ from './Componentes/Pages/js/FAQ'
 import Formulario from './Componentes/Pages/js/Formulario';
-import Playlist from './Componentes/Pages/js/Playlist';
 import Formulario2 from './Componentes/Pages/js/Formulario2';
+import Playlist from './Componentes/Pages/js/Playlist';
 
 
 function App() {

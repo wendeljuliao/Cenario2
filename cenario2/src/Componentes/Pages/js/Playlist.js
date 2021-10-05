@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 
-import playlists from "../../../playlist";
+import playlists from "../../../Mocks/playlist";
 
 export default function Playlist() {
     const { id } = useParams();
@@ -12,7 +12,7 @@ export default function Playlist() {
             <div class="escopo-secundary">
                 {playlist.musicas.map((element) => {
                     return (
-                        <audio controls> <source src={element.video} type="audio/ogg"></source></audio>
+                        <audio controls> <source src={element.video}></source></audio>
                     )
                 })}
 
