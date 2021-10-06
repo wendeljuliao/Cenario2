@@ -1,5 +1,5 @@
-import Image from './../Images/teste3.jpg'
-import Image2 from './../Images/teste1.jpg'
+import Image from './../Images/Industry_Baby.png'
+import Image2 from './../Images/Old-Town-Road.jpg'
 import Image3 from './../Images/teste2.jpg'
 import Image4 from './../Images/teste.jpg'
 import Image5 from './../Images/ph.jpg'
@@ -13,22 +13,22 @@ import video5 from './../musicas/Wiosna.mp3'
 const playlist = [
     {
         id: 0,
-        title: "Playlist 1",
+        title: "Lil Nas X",
         sub: "A melhor",
         imagem: Image,
         musicas: [
             {
-                bgimg: Image,
+                bgimg: Image4,
                 id: 0,
                 video: video5
             },
             {
-                bgimg: Image,
+                bgimg: Image3,
                 id: 1,
                 video: video4
             },
             {
-                bgimg: Image,
+                bgimg: Image2,
                 id: 2,
                 video: video3
             },
@@ -38,7 +38,7 @@ const playlist = [
                 video: video2
             },
             {
-                bgimg: Image,
+                bgimg: Image5,
                 id: 4,
                 video: video1
             }
@@ -49,7 +49,7 @@ const playlist = [
         id: 1,
         title: "Playlist 2",
         sub: "A melhor 2",
-        imagem: Image2,
+        imagem: Image3,
         musicas: [
             {
                 id: 0,
