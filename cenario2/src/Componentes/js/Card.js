@@ -19,7 +19,7 @@ export default class Card extends Component {
 
     render() {
         return (
-            <div class="line" style={{width: "30%"}}>
+            <div class="line">
                 <div class="body" style={{ backgroundImage: `url(${this.props.bgimg})` }}>
                     <label class="title-card">{this.props.title}</label>
                     <label class="sub-card">{this.props.sub}</label>
