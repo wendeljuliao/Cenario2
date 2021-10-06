@@ -1,0 +1,21 @@
+.playlist-line{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.playlist-line label{
+    width: 150px;
+    overflow: hidden;
+}
+
+.playlist-line:hover{
+    background-color: #1ab26b;
+}
+
+.playlist-line:hover label{
+    color: #000000;
+    padding-right: 100% !important;
+}
+
+
+
