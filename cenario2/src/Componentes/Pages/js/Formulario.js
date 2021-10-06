@@ -1,3 +1,5 @@
+import { Redirect } from 'react-router'
+
 import Birth_day from '../../Componentes_Forms/Birth_day';
 import Radio_Box from '../../Componentes_Forms/Radio_Box';
 import Title from '../../Componentes_Forms/Title';
@@ -6,49 +8,93 @@ import '../../../App.css'
 import '../css/Formulario.css'
 import { useState } from 'react';
 
+import users from './../../../Mocks/users'
+
 
 function Formulario() {
   const [email, setEmail] = useState('');
   const [confirmarEmail, setConfirmarEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [nome, setNome] = useState('');
-  const [dataNascimento, setDataNascimento] = useState('');
+  const [dia, setDia] = useState('');
+  const [mes, setMes] = useState('');
+  const [ano, setAno] = useState('');
   const [sexo, setSexo] = useState('');
   const [noticias, setNoticias] = useState(false);
   const [termos, setTermos] = useState(false);
 
+  const [redirect, setRedirect] = useState(false);
+  const [erros, setErros] = useState({emailValidacao: false});
+
   function enviarCampos(e) {
     e.preventDefault()
 
+    if (email == confirmarEmail) {
+      window.alert("Cadastrado com sucesso")
+      let dados = { email, confirmarEmail, senha, nome, dia, mes, ano, sexo, noticias, termos }
+      users.push(dados)
+      console.log(dados)
+
+      setEmail("")
+      setConfirmarEmail("")
+      setSenha("")
+      setNome("")
+      setDia("")
+      setMes("")
+      setAno("")
+      setSexo("")
+      setNoticias(false)
+      setTermos(false)
+
+      //Redirecionar página, porém não precisa no momento
+      setRedirect(true)
+    } else {
+      setErros({emailValidacao: true})
+
+      window.alert("Emails não coincidem")
+
+    }
+  }
+
+  function trocarTela() {
+    if (redirect == true) {
+      return (
+        <Redirect to="/" />
+      )
+
+    }
   }
 
   return (
+
     <div className="escopo-primary">
+
+
       <div className='ins' className="escopo-secundary">
         <Title />
         <div className='ins' className="escopo-secundary">
-          <form onSubmit={(e) => enviarCampos(e)}>
+          <form onSubmit={(e) => enviarCampos(e)} style={{ width: "80%", textAlign: "center" }}>
             <div className="inputField d-flex align-items-start flex-column">
               <label>E-mail</label>
               <input type="email" class="bg-transparent border-0" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Confirme seu E-mail</label>
-              <input type="email" class="bg-transparent border-0" style={{ width: "100%" }} />
+              <input type="email" class="bg-transparent border-0" value={confirmarEmail} onChange={(e) => setConfirmarEmail(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Crie uma senha</label>
-              <input type="password" class="bg-transparent border-0" style={{ width: "100%" }} />
+              <input type="password" class="bg-transparent border-0" value={senha} onChange={(e) => setSenha(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Como devemos chamar você</label>
-              <input class="bg-transparent border-0" style={{ width: "100%" }} />
+              <input class="bg-transparent border-0" value={nome} onChange={(e) => setNome(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Data de nascimento</label>
               <div className="d-flex justify-content-center flex-row">
-                <input class="bg-transparent border-0" type="text" style={{ width: "100%" }} />
-                <select class="bg-transparent border-0 mx-3" style={{ width: "100%" }}>
+                <input class="bg-transparent border-0" type="text" value={dia} onChange={(e) => setDia(e.target.value)} style={{ width: "100%" }} />
+                <select class="bg-transparent border-0 mx-3" value={mes} onChange={(e) => setMes(e.target.value)} style={{ width: "100%" }}>
                   <option className='nascimento-input-option'>Mês</option>
                   <option className='nascimento-input-option'>Janeiro</option>
                   <option className='nascimento-input-option'>Fevereiro</option>
@@ -63,7 +109,7 @@ function Formulario() {
                   <option className='nascimento-input-option'>Novembro</option>
                   <option className='nascimento-input-option'>Dezembro</option>
                 </select>
-                <input class="bg-transparent border-0" type="text" style={{ width: "100%" }} />
+                <input class="bg-transparent border-0" type="text" value={ano} onChange={(e) => setAno(e.target.value)} style={{ width: "100%" }} />
               </div>
             </div>
             <div className="inputField d-flex align-items-start flex-column">
@@ -86,18 +132,19 @@ function Formulario() {
             <div className='inside_elements1 justify-content-start py-5'>
               <div>
                 <div className="align-items-center">
-                  <input type="checkbox" />
+                  <input type="checkbox" checked={noticias} onClick={() => setNoticias(!noticias)} />
                   <label className="mr-1" for="marketing"> Quero Compartilhar dados cadastrais o suporte do Spotify.</label>
                 </div>
                 <div className="align-items-center">
-                  <input className="mr-1" type="checkbox" />
+                  <input className="mr-1" type="checkbox" checked={termos} onClick={() => setTermos(!termos)} />
                   <label for="marketing"> Eu concordo com os <a href="" style={{ color: "#26C77B" }}>Termos e Condições de Uso do Spotify.</a></label>
                 </div>
               </div>
             </div>
 
+            <input type="submit" style={{ margin: 20 }} value="Inscreva-se" class="inscrevase" />
+
           </form>
-          <input type="submit" style={{ margin: 12 }} value="Inscreva-se" class="inscrevase" />
         </div>
       </div>
     </div>
