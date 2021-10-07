@@ -7,9 +7,12 @@ import CheckBox from '../../Componentes_Forms/CheckBox';
 import '../../../App.css'
 import '../css/Formulario.css'
 import { useState } from 'react';
+import Toast from '../../js/Toast'
 
 import users from './../../../Mocks/users'
 
+var cor;
+var text;
 
 function Formulario() {
   const [email, setEmail] = useState('');
@@ -26,11 +29,17 @@ function Formulario() {
   const [redirect, setRedirect] = useState(false);
   const [erros, setErros] = useState({emailValidacao: false});
 
-  function enviarCampos(e) {
+  function delay(n){
+    return new Promise(function(resolve){
+        setTimeout(resolve,n*1000);
+    });
+  }
+
+
+  async function enviarCampos(e) {
     e.preventDefault()
 
     if (email == confirmarEmail) {
-      window.alert("Cadastrado com sucesso")
       let dados = { email, confirmarEmail, senha, nome, dia, mes, ano, sexo, noticias, termos }
       users.push(dados)
       console.log(dados)
@@ -45,13 +54,16 @@ function Formulario() {
       setSexo("")
       setNoticias(false)
       setTermos(false)
-
+      cor = '#1ab26b'
+      text = 'Cadastro realizado com sucesso!'
+      
       //Redirecionar página, porém não precisa no momento
       setRedirect(true)
     } else {
       setErros({emailValidacao: true})
 
-      window.alert("Emails não coincidem")
+      cor = 'red'
+      text = 'Emails não coincidem!'
 
     }
   }
@@ -92,7 +104,7 @@ function Formulario() {
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Data de nascimento</label>
-              <div className="d-flex justify-content-center flex-row">
+              <div className="d-flex justify-content-center flex-row w-100">
                 <input class="bg-transparent border-0" type="text" value={dia} onChange={(e) => setDia(e.target.value)} style={{ width: "100%" }} />
                 <select class="bg-transparent border-0 mx-3" value={mes} onChange={(e) => setMes(e.target.value)} style={{ width: "100%" }}>
                   <option className='nascimento-input-option'>Mês</option>
@@ -131,7 +143,7 @@ function Formulario() {
             </div>
             <div className='inside_elements1 justify-content-start py-5'>
               <div>
-                <div className="align-items-center">
+                <div className="align-items-center d-flex justify-content-start">
                   <input type="checkbox" checked={noticias} onClick={() => setNoticias(!noticias)} />
                   <label className="mr-1" for="marketing"> Quero Compartilhar dados cadastrais o suporte do Spotify.</label>
                 </div>
@@ -145,6 +157,7 @@ function Formulario() {
             <input type="submit" style={{ margin: 20 }} value="Inscreva-se" class="inscrevase" />
 
           </form>
+          <Toast text={text} color={cor} onClick={setTimeout(() => {text = ''; cor = ''}, 2000)}/>
         </div>
       </div>
     </div>
