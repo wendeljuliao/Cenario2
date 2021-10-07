@@ -108,9 +108,9 @@ function Formulario() {
             <div className="inputField d-flex align-items-start flex-column">
               <label>Crie uma senha</label>
               <input required type="password" class="bg-transparent border-0" value={senha} onBlur={(e) => {
-                if (e.target.value.length <= 0) setErros({validacaoSenha: true}) 
-                else setErros({validacaoSenha: false}) 
-                
+                if (e.target.value.length <= 0) setErros({ validacaoSenha: true })
+                else setErros({ validacaoSenha: false })
+
               }} onChange={(e) => setSenha(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
@@ -120,7 +120,10 @@ function Formulario() {
             <div className="inputField d-flex align-items-start flex-column">
               <label>Data de nascimento</label>
               <div className="d-flex justify-content-center flex-row w-100">
-                <input class="bg-transparent border-0" type="text" value={dia} onChange={(e) => setDia(e.target.value)} style={{ width: "100%" }} />
+                <input class="bg-transparent border-0" type="text" value={dia} onChange={(e) => {
+                  if (e.target.value.length <= 2)
+                    setDia(e.target.value)
+                }} style={{ width: "100%" }} />
                 <select class="bg-transparent border-0 mx-3" value={mes} onChange={(e) => setMes(e.target.value)} style={{ width: "100%" }}>
                   <option className='nascimento-input-option'>Mês</option>
                   <option className='nascimento-input-option'>Janeiro</option>
@@ -136,7 +139,10 @@ function Formulario() {
                   <option className='nascimento-input-option'>Novembro</option>
                   <option className='nascimento-input-option'>Dezembro</option>
                 </select>
-                <input class="bg-transparent border-0" type="text" value={ano} onChange={(e) => setAno(e.target.value)} style={{ width: "100%" }} />
+                <input class="bg-transparent border-0" type="text" value={ano} onChange={(e) => { 
+                  if (e.target.value.length <= 4)
+                    setAno(e.target.value) 
+                  }} style={{ width: "100%" }} />
               </div>
             </div>
             <div className="inputField d-flex align-items-start flex-column">
