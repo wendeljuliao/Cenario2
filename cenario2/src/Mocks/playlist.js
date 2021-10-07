@@ -52,22 +52,27 @@ const playlist = [
         imagem: Image2,
         musicas: [
             {
+                bgimg: Image4,
                 id: 0,
                 video: video2
             },
             {
+                bgimg: Image4,
                 id: 1,
                 video: video1
             },
             {
+                bgimg: Image4,
                 id: 2,
                 video: video3
             },
             {
+                bgimg: Image4,
                 id: 3,
                 video: video4
             },
             {
+                bgimg: Image4,
                 id: 4,
                 video: video5
             }
