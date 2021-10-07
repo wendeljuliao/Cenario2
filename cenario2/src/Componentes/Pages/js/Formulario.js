@@ -27,11 +27,12 @@ function Formulario() {
   const [termos, setTermos] = useState(false);
 
   const [redirect, setRedirect] = useState(false);
-  const [erros, setErros] = useState({emailValidacao: false});
+  const [visible, setVisible] = useState(false);
+  const [erros, setErros] = useState({});
 
-  function delay(n){
-    return new Promise(function(resolve){
-        setTimeout(resolve,n*1000);
+  function delay(n) {
+    return new Promise(function (resolve) {
+      setTimeout(resolve, n * 1000);
     });
   }
 
@@ -39,7 +40,7 @@ function Formulario() {
   async function enviarCampos(e) {
     e.preventDefault()
 
-    if (email == confirmarEmail) {
+    if (email == confirmarEmail && email.length > 0) {
       let dados = { email, confirmarEmail, senha, nome, dia, mes, ano, sexo, noticias, termos }
       users.push(dados)
       console.log(dados)
@@ -56,16 +57,25 @@ function Formulario() {
       setTermos(false)
       cor = '#1ab26b'
       text = 'Cadastro realizado com sucesso!'
-      
+
       //Redirecionar página, porém não precisa no momento
       setRedirect(true)
+
     } else {
-      setErros({emailValidacao: true})
 
       cor = 'red'
       text = 'Emails não coincidem!'
 
+
     }
+
+    //Mostrar toast
+    setVisible(true)
+
+    setTimeout(() => {
+      setVisible(false)
+    }, 2000);
+
   }
 
   function trocarTela() {
@@ -81,6 +91,7 @@ function Formulario() {
 
     <div className="escopo-primary">
 
+      {visible == true ? <Toast text={text} color={cor} onClick={setTimeout(() => { text = ''; cor = '' }, 2000)} /> : <></>}
 
       <div className='ins' className="escopo-secundary">
         <Title />
@@ -88,15 +99,19 @@ function Formulario() {
           <form onSubmit={(e) => enviarCampos(e)} style={{ width: "80%", textAlign: "center" }}>
             <div className="inputField d-flex align-items-start flex-column">
               <label>E-mail</label>
-              <input type="email" class="bg-transparent border-0" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }} />
+              <input required type="email" class="bg-transparent border-0" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Confirme seu E-mail</label>
-              <input type="email" class="bg-transparent border-0" value={confirmarEmail} onChange={(e) => setConfirmarEmail(e.target.value)} style={{ width: "100%" }} />
+              <input required type="email" class="bg-transparent border-0" value={confirmarEmail} onChange={(e) => setConfirmarEmail(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Crie uma senha</label>
-              <input type="password" class="bg-transparent border-0" value={senha} onChange={(e) => setSenha(e.target.value)} style={{ width: "100%" }} />
+              <input required type="password" class="bg-transparent border-0" value={senha} onBlur={(e) => {
+                if (e.target.value.length <= 0) setErros({validacaoSenha: true}) 
+                else setErros({validacaoSenha: false}) 
+                
+              }} onChange={(e) => setSenha(e.target.value)} style={{ width: "100%" }} />
             </div>
             <div className="inputField d-flex align-items-start flex-column">
               <label>Como devemos chamar você</label>
@@ -157,7 +172,6 @@ function Formulario() {
             <input type="submit" style={{ margin: 20 }} value="Inscreva-se" class="inscrevase" />
 
           </form>
-          <Toast text={text} color={cor} onClick={setTimeout(() => {text = ''; cor = ''}, 2000)}/>
         </div>
       </div>
     </div>

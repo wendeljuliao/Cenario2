@@ -49,7 +49,7 @@ const playlist = [
         id: 1,
         title: "Playlist 2",
         sub: "A melhor 2",
-        imagem: Image3,
+        imagem: Image2,
         musicas: [
             {
                 id: 0,
