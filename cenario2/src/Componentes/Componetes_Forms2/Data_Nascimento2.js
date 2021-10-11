@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Componentes_Forms/Forms.css'
 
-function Label_Input2(props) {
+function Data_Nascimento2(props) {
 
     return (
 
@@ -13,4 +13,4 @@ function Label_Input2(props) {
     )
 
 }
-export default Label_Input2;
+export default Data_Nascimento2;
