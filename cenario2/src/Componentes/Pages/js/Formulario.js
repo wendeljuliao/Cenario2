@@ -43,7 +43,7 @@ function Formulario() {
     if (email == confirmarEmail && email.length > 0) {
       let dados = { email, confirmarEmail, senha, nome, dia, mes, ano, sexo, noticias, termos }
       users.push(dados)
-      console.log(dados)
+      console.log(users)
 
       setEmail("")
       setConfirmarEmail("")

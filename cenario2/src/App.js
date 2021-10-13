@@ -26,7 +26,7 @@ function App() {
 
         <Route path="/git" component={Github} />
 
-        <Route path="/cadastro" component={Formulario3} />
+        <Route path="/cadastro" component={Formulario} />
 
         <Route path="/playlist/:id" component={Playlist} />
 
