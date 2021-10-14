@@ -85,22 +85,27 @@ const playlist = [
         imagem: Image3,
         musicas: [
             {
+                bgimg: Image,
                 id: 0,
                 video: video3
             },
             {
+                bgimg: Image,
                 id: 1,
                 video: video2
             },
             {
+                bgimg: Image,
                 id: 2,
                 video: video1
             },
             {
+                bgimg: Image,
                 id: 3,
                 video: video4
             },
             {
+                bgimg: Image,
                 id: 4,
                 video: video5
             }
@@ -113,22 +118,27 @@ const playlist = [
         imagem: Image4,
         musicas: [
             {
+                bgimg: Image2,
                 id: 0,
                 video: video5
             },
             {
+                bgimg: Image2,
                 id: 1,
                 video: video3
             },
             {
+                bgimg: Image2,
                 id: 2,
                 video: video2
             },
             {
+                bgimg: Image2,
                 id: 3,
                 video: video4
             },
             {
+                bgimg: Image2,
                 id: 4,
                 video: video1
             }
@@ -142,22 +152,27 @@ const playlist = [
         imagem: Image5,
         musicas: [
             {
+                bgimg: Image3,
                 id: 0,
                 video: video3
             },
             {
+                bgimg: Image3,
                 id: 1,
                 video: video4
             },
             {
+                bgimg: Image3,
                 id: 2,
                 video: video1
             },
             {
+                bgimg: Image3,
                 id: 3,
                 video: video2
             },
             {
+                bgimg: Image3,
                 id: 4,
                 video: video5
             }
