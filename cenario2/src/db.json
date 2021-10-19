@@ -2,7 +2,32 @@
     "users": [
         {
             "id": 0,
-            "nome": "João"
+            "nome": "João",
+            "playlists": [
+                {
+                    "id": 0,
+                    "title": "Lil Nas X",
+                    "sub": "A melhor",
+                    "imagem": "./Imagens/Industry_Baby.png",
+                    "musicas": [
+                        {
+                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "id": 0,
+                            "video": "./musicas/Lofi_01.mp3"
+                        },
+                        {
+                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "id": 1,
+                            "video": "./musicas/Lofi_01.mp3"
+                        },
+                        {
+                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "id": 2,
+                            "video": "./musicas/Lofi_01.mp3"
+                        }
+                    ]
+                }
+            ]
         }
     ],
 

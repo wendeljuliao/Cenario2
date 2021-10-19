@@ -11,15 +11,13 @@ export default function Home() {
 
     useEffect(() => {
 
-        axios.get("http://localhost:3001/playlists/")
+        axios.get("http://localhost:3001/users/0")
         .then(res => {
-            console.log(res.data)
-            setPlaylists(res.data)
+            console.log(res.data.playlists)
+            setPlaylists(res.data.playlists)
         })
 
     }, [])
-
-
 
 
     return (
