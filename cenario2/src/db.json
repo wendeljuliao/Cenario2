@@ -3,25 +3,33 @@
         {
             "id": 0,
             "nome": "João",
+            "email": "joao@hotmail.com",
+            "senha": "123",
+            "dia": "01",
+            "mes": "01",
+            "ano": "2000",
+            "sexo": "Masculino",
+            "noticias": true,
+            "termos": true,
             "playlists": [
                 {
                     "id": 0,
                     "title": "Lil Nas X",
                     "sub": "A melhor",
-                    "imagem": "./Imagens/Industry_Baby.png",
+                    "imagem": "./Images/Industry_Baby.png",
                     "musicas": [
                         {
-                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "bgimg": "./Images/Industry_Baby.png",
                             "id": 0,
                             "video": "./musicas/Lofi_01.mp3"
                         },
                         {
-                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "bgimg": "./Images/Industry_Baby.png",
                             "id": 1,
                             "video": "./musicas/Lofi_01.mp3"
                         },
                         {
-                            "bgimg": "./Imagens/Industry_Baby.png",
+                            "bgimg": "./Images/Industry_Baby.png",
                             "id": 2,
                             "video": "./musicas/Lofi_01.mp3"
                         }
@@ -36,20 +44,20 @@
             "id": 0,
             "title": "Lil Nas X",
             "sub": "A melhor",
-            "imagem": "./Imagens/Industry_Baby.png",
+            "imagem": "./Images/Industry_Baby.png",
             "musicas": [
                 {
-                    "bgimg": "./Imagens/Industry_Baby.png",
+                    "bgimg": "./Images/Industry_Baby.png",
                     "id": 0,
                     "video": "./musicas/Lofi_01.mp3"
                 },
                 {
-                    "bgimg": "./Imagens/Industry_Baby.png",
+                    "bgimg": "./Images/Industry_Baby.png",
                     "id": 1,
                     "video": "./musicas/Lofi_01.mp3"
                 },
                 {
-                    "bgimg": "./Imagens/Industry_Baby.png",
+                    "bgimg": "./Images/Industry_Baby.png",
                     "id": 2,
                     "video": "./musicas/Lofi_01.mp3"
                 }

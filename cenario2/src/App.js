@@ -12,6 +12,7 @@ import Formulario from './Componentes/Pages/js/Formulario';
 import Formulario2 from './Componentes/Pages/js/Formulario2';
 import Formulario3 from './Componentes/Pages/js/Formulario3';
 import Playlist from './Componentes/Pages/js/Playlist';
+import Login from './Componentes/Pages/js/Login';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
         <Route path="/cadastro" component={Formulario} />
 
         <Route path="/playlist/:id" component={Playlist} />
+
+        <Route path="/login" component={Login} />
 
       </Switch>
 

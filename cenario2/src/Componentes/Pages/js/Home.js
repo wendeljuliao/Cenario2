@@ -10,18 +10,19 @@ export default function Home() {
     const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
-
-        axios.get("http://localhost:3001/users/0")
-        .then(res => {
-            console.log(res.data.playlists)
-            setPlaylists(res.data.playlists)
-        })
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        if (usuario !== null) {
+            setPlaylists(usuario.playlists)
+        } else {
+            axios.get("http://localhost:3001/playlists")
+            .then((res) => setPlaylists(res.data))
+        }
 
     }, [])
 
 
     return (
-        <div class="escopo-primary"> 
+        <div class="escopo-primary">
             <div class="escopo-secundary">
                 <div class="container">
                     <div class="row d-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(2, 320px)', gridAutoFlow: 'row' }}>
