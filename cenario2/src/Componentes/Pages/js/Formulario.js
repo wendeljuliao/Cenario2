@@ -1,4 +1,7 @@
+import React, { useState } from 'react';
 import { Redirect } from 'react-router'
+
+import axios from 'axios'
 
 import Birth_day from '../../Componentes_Forms/Birth_day';
 import Radio_Box from '../../Componentes_Forms/Radio_Box';
@@ -6,7 +9,6 @@ import Title from '../../Componentes_Forms/Title';
 import CheckBox from '../../Componentes_Forms/CheckBox';
 import '../../../App.css'
 import '../css/Formulario.css'
-import { useState } from 'react';
 import Toast from '../../js/Toast'
 
 import users from './../../../Mocks/users'
@@ -45,6 +47,9 @@ function Formulario() {
       users.push(dados)
       console.log(users)
 
+      axios.post("http://localhost:3001/users", dados)
+        .then(res => console.log(res.data))
+        
       setEmail("")
       setConfirmarEmail("")
       setSenha("")
@@ -139,10 +144,10 @@ function Formulario() {
                   <option className='nascimento-input-option'>Novembro</option>
                   <option className='nascimento-input-option'>Dezembro</option>
                 </select>
-                <input class="bg-transparent border-0" type="text" value={ano} onChange={(e) => { 
+                <input class="bg-transparent border-0" type="text" value={ano} onChange={(e) => {
                   if (e.target.value.length <= 4)
-                    setAno(e.target.value) 
-                  }} style={{ width: "100%" }} />
+                    setAno(e.target.value)
+                }} style={{ width: "100%" }} />
               </div>
             </div>
             <div className="inputField d-flex align-items-start flex-column">

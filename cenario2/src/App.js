@@ -19,10 +19,21 @@ import Login from './Componentes/Pages/js/Login';
 
 function App() {
   const [login, setLogin] = useState(false);
+  const [usuario, setUsuario] = useState({});
+
+
+  useEffect(() => {
+    if (login == true) {
+      setUsuario(JSON.parse(localStorage.getItem('usuarioLogado')));
+    } else {
+      setUsuario({nome: null})
+    }
+  }, [login])
+  
 
   return (
     <Router>
-      <Header login={login} setLogin={setLogin} />
+      <Header login={login} setLogin={setLogin} nome={usuario.nome} />
 
       <Switch>
         <Route exact path="/" component={Home} />
