@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "id": 0,
-      "nome": "João",
       "email": "joao@hotmail.com",
       "senha": "123",
+      "nome": "João",
       "dia": "01",
       "mes": "01",
       "ano": "2000",
       "sexo": "Masculino",
       "noticias": true,
       "termos": true,
+      "id": 0,
       "playlists": [
         {
           "id": 0,

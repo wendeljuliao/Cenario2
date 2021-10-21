@@ -26,7 +26,7 @@ export default function Header(props) {
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/" style={{ textDecoration: "none", color: "white" }}>Home</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/faq" style={{ textDecoration: "none", color: "white" }}>FAQ</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/git" style={{ textDecoration: "none", color: "white" }}>Github</Link></Nav.Link>
-                        <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/cadastro" style={{ textDecoration: "none", color: "white" }}>Formulario</Link></Nav.Link>
+                        {props.login == false ? <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/cadastro" style={{ textDecoration: "none", color: "white" }}>Formulario</Link></Nav.Link> : <></>}
                         <Nav.Link style={{ color: "white", fontSize: "20px"}}>
                             {props.login == false ? (
 
@@ -39,7 +39,7 @@ export default function Header(props) {
 
                             )}
                         </Nav.Link>
-                        {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px"}}><Link to="/" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
+                        {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px"}}><Link to="/edit" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
 
 
 

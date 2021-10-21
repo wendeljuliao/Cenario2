@@ -11,6 +11,8 @@ import Github from './Componentes/Pages/js/Github';
 import Home from './Componentes/Pages/js/Home'
 import FAQ from './Componentes/Pages/js/FAQ'
 import Formulario from './Componentes/Pages/js/Formulario';
+import EditFormulario from './Componentes/Pages/js/EditFormulario';
+
 import Formulario2 from './Componentes/Pages/js/Formulario2';
 import Formulario3 from './Componentes/Pages/js/Formulario3';
 import Playlist from './Componentes/Pages/js/Playlist';
@@ -43,6 +45,8 @@ function App() {
         <Route path="/git" component={Github} />
 
         <Route path="/cadastro" component={Formulario} />
+
+        <Route path="/edit" component={EditFormulario} />
 
         <Route path="/playlist/:id" component={Playlist} />
 
