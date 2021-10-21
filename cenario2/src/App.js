@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
@@ -16,9 +18,11 @@ import Login from './Componentes/Pages/js/Login';
 
 
 function App() {
+  const [login, setLogin] = useState(false);
+
   return (
     <Router>
-      <Header />
+      <Header login={login} setLogin={setLogin} />
 
       <Switch>
         <Route exact path="/" component={Home} />
@@ -31,14 +35,16 @@ function App() {
 
         <Route path="/playlist/:id" component={Playlist} />
 
-        <Route path="/login" component={Login} />
+        <Route path="/login" >
+          <Login setLogin={setLogin} />
+        </Route>
 
       </Switch>
 
       <Footer />
-      
+
     </Router>
-    
+
   );
 }
 

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 
 import axios from 'axios';
 
-export default function Login() {
+export default function Login(props) {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [erros, setErros] = useState({ dadosInvalidos: '' });
@@ -15,16 +15,19 @@ export default function Login() {
 
         axios.get(`http://localhost:3001/users?email=${email}`)
             .then((res) => {
-                const usuario = res.data[0];
+                if (res.data[0] != undefined) {
+                    const usuario = res.data[0];
 
-                if (usuario.senha !== senha) {
-                    setErros({ dadosInvalidos: 'Dados Inválidos' })
-                    return;
+                    if (usuario.senha !== senha) {
+                        setErros({ dadosInvalidos: 'Dados Inválidos' })
+                        return;
+                    }
+
+                    localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+                    props.setLogin(true)
+
+                    history.push('/')
                 }
-
-                localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-                history.push('/')
-
             })
     }
 

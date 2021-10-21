@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 import Navbar from 'react-bootstrap/Navbar'
@@ -8,11 +8,8 @@ import './../css/Header.css'
 import { Link } from "react-router-dom"
 
 
-export default function Header() {
+export default function Header(props) {
 
-    useEffect(() => {
-
-    })
 
     return (
         <Navbar bg="black" expand="lg">
@@ -29,9 +26,17 @@ export default function Header() {
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/" style={{ textDecoration: "none", color: "white" }}>Home</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/faq" style={{ textDecoration: "none", color: "white" }}>FAQ</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/git" style={{ textDecoration: "none", color: "white" }}>Github</Link></Nav.Link>
-                        <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/cadastro" style={{ textDecoration: "none", color: "white" }}>Cadastro</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}>
-                            {localStorage.getItem("usuarioLogado") === null ? <Link to="/login" style={{ textDecoration: "none", color: "white" }}>Login</Link> : <Link onClick={() => localStorage.removeItem("usuarioLogado")} to="/" style={{ textDecoration: "none", color: "white" }} >Logout</Link>}
+                            {props.login == false ? (
+
+                                <Link to="/login" style={{ textDecoration: "none", color: "white" }}>Login</Link>
+                            ) : (
+                                <Link onClick={() => {
+                                    localStorage.removeItem("usuarioLogado")
+                                    props.setLogin(false)
+                                }} to="/" style={{ textDecoration: "none", color: "white" }} >Logout</Link>
+
+                            )}
                         </Nav.Link>
 
                     </Nav>
