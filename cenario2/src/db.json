@@ -10,7 +10,6 @@
       "sexo": "Masculino",
       "noticias": true,
       "termos": true,
-      "id": 0,
       "playlists": [
         {
           "id": 0,
@@ -35,7 +34,8 @@
             }
           ]
         }
-      ]
+      ],
+      "id": 0
     },
     {
       "email": "wendelljuliao@hotmail.com",

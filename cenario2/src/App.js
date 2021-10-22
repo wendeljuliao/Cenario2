@@ -25,6 +25,12 @@ function App() {
 
 
   useEffect(() => {
+    const logado = JSON.parse(localStorage.getItem('usuarioLogado'))
+
+    if (logado != null) {
+      setLogin(true)
+    }
+
     if (login == true) {
       setUsuario(JSON.parse(localStorage.getItem('usuarioLogado')));
     } else {

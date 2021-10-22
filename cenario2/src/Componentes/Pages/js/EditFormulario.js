@@ -23,6 +23,7 @@ function EditFormulario() {
     const [sexo, setSexo] = useState('');
     const [noticias, setNoticias] = useState(false);
     const [termos, setTermos] = useState(false);
+    const [playlists, setPlaylists] = useState([]);
 
     const [visible, setVisible] = useState(false);
     const [erros, setErros] = useState({});
@@ -40,13 +41,14 @@ function EditFormulario() {
         setSexo(usuario.sexo)
         setNoticias(usuario.noticias)
         setTermos(usuario.termos)
+        setPlaylists(usuario.playlists)
     }, [])
 
 
     async function editarCampos(e) {
         e.preventDefault()
 
-        let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos }
+        let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists}
 
 
         axios.put(`http://localhost:3001/users/${id}`, dados)
