@@ -21,16 +21,16 @@ export default function Header(props) {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: "rgb(26 178 107);" }} />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" style={{ width:"100%" }}>
+                    <Nav className="me-auto" style={{ width: "100%", position: "relative" }}>
 
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/" style={{ textDecoration: "none", color: "white" }}>Home</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/faq" style={{ textDecoration: "none", color: "white" }}>FAQ</Link></Nav.Link>
                         <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/git" style={{ textDecoration: "none", color: "white" }}>Github</Link></Nav.Link>
                         {props.login == false ? <Nav.Link style={{ color: "white", fontSize: "20px" }}><Link to="/cadastro" style={{ textDecoration: "none", color: "white" }}>Formulario</Link></Nav.Link> : <></>}
-                        <Nav.Link style={{ color: "white", fontSize: "20px"}}>
+                        <Nav.Link style={{ color: "white", fontSize: "20px" }}>
                             {props.login == false ? (
 
-                                <Link to="/login" style={{ textDecoration: "none", color: "white"}}>Login</Link>
+                                <Link to="/login" style={{ textDecoration: "none", color: "white" }}>Login</Link>
                             ) : (
                                 <Link onClick={() => {
                                     localStorage.removeItem("usuarioLogado")
@@ -39,7 +39,8 @@ export default function Header(props) {
 
                             )}
                         </Nav.Link>
-                        {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px"}}><Link to="/edit" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
+
+                        {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px", position: "absolute", right: 0 }}><Link to="/edit" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
 
 
 
