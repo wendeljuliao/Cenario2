@@ -1,4 +1,5 @@
-[
+{
+    "musicas": [
     {
         "id_musica": 0,
         "Cantor": "Lil Nas X",
@@ -55,4 +56,5 @@
         "imagem": "./Images/Industry_Baby.png",
         "musica": "./musicas/Wild_Side.mp3"
     }
-]
+    ]
+}

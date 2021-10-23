@@ -17,11 +17,12 @@ import Formulario2 from './Componentes/Pages/js/Formulario2';
 import Formulario3 from './Componentes/Pages/js/Formulario3';
 import Playlist from './Componentes/Pages/js/Playlist';
 import Login from './Componentes/Pages/js/Login';
-
+import Busca from './Componentes/Pages/js/Busca';
 
 function App() {
   const [login, setLogin] = useState(false);
   const [usuario, setUsuario] = useState({});
+
 
 
   useEffect(() => {
@@ -42,7 +43,6 @@ function App() {
   return (
     <Router>
       <Header login={login} setLogin={setLogin} nome={usuario.nome} />
-
       <Switch>
         <Route exact path="/" component={Home} />
 
@@ -50,18 +50,18 @@ function App() {
 
         <Route path="/git" component={Github} />
 
-        <Route path="/cadastro" component={Formulario} />
+        <Route path="/cadastro" component={Busca} />
 
         <Route path="/edit" component={EditFormulario} />
 
         <Route path="/playlist/:id" component={Playlist} />
+
 
         <Route path="/login" >
           <Login setLogin={setLogin} />
         </Route>
 
       </Switch>
-
       <Footer />
 
     </Router>
