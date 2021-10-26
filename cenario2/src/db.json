@@ -15,22 +15,22 @@
           "id": 0,
           "title": "Lil Nas X",
           "sub": "A melhor",
-          "imagem": "./Images/Industry_Baby.png",
+          "imagem": "/Images/Industry_Baby.png",
           "musicas": [
             {
-              "bgimg": "./Images/Industry_Baby.png",
+              "bgimg": "/Images/Industry_Baby.png",
               "id": 0,
-              "video": "./musicas/Lofi_01.mp3"
+              "video": "/musicas/Lofi_01.mp3"
             },
             {
-              "bgimg": "./Images/Industry_Baby.png",
+              "bgimg": "/Images/Industry_Baby.png",
               "id": 1,
-              "video": "./musicas/Lofi_01.mp3"
+              "video": "/musicas/Lost_in_paradise.mp3"
             },
             {
-              "bgimg": "./Images/Industry_Baby.png",
+              "bgimg": "/Images/Industry_Baby.png",
               "id": 2,
-              "video": "./musicas/Lofi_01.mp3"
+              "video": "/musicas/Lofi_01.mp3"
             }
           ]
         }
@@ -55,22 +55,22 @@
       "id": 0,
       "title": "Lil Nas X",
       "sub": "A melhor",
-      "imagem": "./Images/Industry_Baby.png",
+      "imagem": "/Images/Industry_Baby.png",
       "musicas": [
         {
-          "bgimg": "./Images/Industry_Baby.png",
+          "bgimg": "/Images/Industry_Baby.png",
           "id": 0,
-          "video": "./musicas/Lofi_01.mp3"
+          "video": "/musicas/Lofi_01.mp3"
         },
         {
-          "bgimg": "./Images/Industry_Baby.png",
+          "bgimg": "/Images/Industry_Baby.png",
           "id": 1,
-          "video": "./musicas/Lofi_01.mp3"
+          "video": "/musicas/Lofi_01.mp3"
         },
         {
-          "bgimg": "./Images/Industry_Baby.png",
+          "bgimg": "/Images/Industry_Baby.png",
           "id": 2,
-          "video": "./musicas/Lofi_01.mp3"
+          "video": "/musicas/Lost_in_paradise.mp3"
         }
       ]
     }

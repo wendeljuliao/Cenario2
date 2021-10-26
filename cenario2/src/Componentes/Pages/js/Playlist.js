@@ -19,8 +19,9 @@ export default function Playlist() {
             setMusicas(usuario.playlists[id].musicas)
         } else {
             axios.get("http://localhost:3001/playlists")
-                .then((res) => setMusicas(res.data[0].musicas))
+            .then((res) => setMusicas(res.data[0].musicas))
         }
+        
 
 
     }, [])
@@ -34,7 +35,9 @@ export default function Playlist() {
                             <img src={element.bgimg} style={{ width: "100px", height: "100px", objectFit: "cover", marginRight: 10, borderRadius: 10 }} />
                             <div className="d-flex align-items-start justify-content-center flex-column m-2" style={{ width: "80%" }}>
                                 <label>{element.video}</label>
-                                <audio controls className="w-100"> <source src={element.video} type="audio/ogg"></source></audio>
+                                <audio controls className="w-100"> <source src={element.video} type="audio/mp3"></source></audio>
+                                {console.log(element)}
+
                             </div>
                         </div>
                     )
