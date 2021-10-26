@@ -43,7 +43,7 @@ function Formulario() {
     e.preventDefault()
 
     if (email == confirmarEmail && email.length > 0) {
-      let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos }
+      let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists: [] }
       users.push(dados)
       console.log(users)
 
