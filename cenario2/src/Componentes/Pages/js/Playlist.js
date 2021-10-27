@@ -19,7 +19,7 @@ export default function Playlist() {
             setMusicas(usuario.playlists[id].musicas)
         } else {
             axios.get("http://localhost:3001/playlists")
-            .then((res) => setMusicas(res.data[0].musicas))
+            .then((res) => setMusicas(res.data[id].musicas))
         }
         
 

@@ -12,10 +12,10 @@ export default function Home() {
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     
-    const [nomePlaylist, setNomePlaylist] = useState('');
-    const [descricaoPlaylist, setDescricaoPlaylist] = useState('');
-    const [idPlaylist, setIdPlaylist] = useState('');
-    const [imagePlaylist, setImagePlaylist] = useState('');
+    const [title, settitle] = useState('');
+    const [sub, setsub] = useState('');
+    const [id, setid] = useState('');
+    const [image, setimage] = useState('');
 
     const [visible, setVisible] = useState(false);
 
@@ -23,6 +23,8 @@ export default function Home() {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
         if (usuario !== null) {
             setPlaylists(usuario.playlists)
+
+
         } else {
             axios.get("http://localhost:3001/playlists")
             .then((res) => setPlaylists(res.data))
@@ -35,18 +37,20 @@ export default function Home() {
     async function cadastrarPlaylist(e) {
         e.preventDefault()
 
-        if (nomePlaylist.length > 0) {
-            let dados = { nomePlaylist, descricaoPlaylist, idPlaylist, imagePlaylist, musicasPlaylist: [] }
+        if (title.length > 0) {
+            let dados = { title, sub, id, image, musicas: [] }
       
             axios.post("http://localhost:3001/playlists", dados)
               .then(res => console.log(res.data))
              
-            setNomePlaylist("")  
-            setDescricaoPlaylist("")
-            setIdPlaylist("")
-            setImagePlaylist("")
+            settitle("")  
+            setsub("")
+            setid("")
+            setimage("")
             cor = '#1ab26b'
             text = 'Playlist cadastrada com sucesso!'
+
+            setIsModalVisible(false)
       
           } else {
       
@@ -90,11 +94,11 @@ export default function Home() {
                                             <div style={{ width: '100%' }}>
                                                 <div className="inputField d-flex align-items-start flex-column py-3">
                                                     <label>Nome da nova Playlist</label>
-                                                    <input value={nomePlaylist} required type="text" class="bg-transparent border-0" onChange={(e) => setNomePlaylist(e.target.value)} style={{ width: "100%" }} />
+                                                    <input value={title} required type="text" class="bg-transparent border-0" onChange={(e) => settitle(e.target.value)} style={{ width: "100%" }} />
                                                 </div>
                                                 <div className="inputField d-flex align-items-start flex-column py-3">
                                                     <label>Descrição</label>
-                                                    <input value={descricaoPlaylist} required type="text" class="bg-transparent border-0" onChange={(e) => setDescricaoPlaylist(e.target.value)} style={{ width: "100%" }} />
+                                                    <input value={sub} required type="text" class="bg-transparent border-0" onChange={(e) => setsub(e.target.value)} style={{ width: "100%" }} />
                                                 </div>
                                             </div>
                                         </div>
