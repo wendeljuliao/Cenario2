@@ -7,9 +7,34 @@ import Container from 'react-bootstrap/Container'
 import './../css/Header.css'
 import { Link } from "react-router-dom"
 
+import axios from 'axios';
 
 export default function Header(props) {
 
+
+
+    function setBusca(e) {
+
+        //depois resolver pra ele sempre abrir a porta certa
+        axios.get("http://localhost:3003/musicas")
+            .then((res) => {
+                var list = document.getElementById('musicas_procuradas');
+                console.log(list)
+                for (let i in res.data){
+
+                    var cantor = res.data[i]["Cantor"].toLowerCase();
+                    var titulo = res.data[i]["titulo_musica"].toLowerCase();
+                    var string_atual = e.toLowerCase();;
+                    var option = document.createElement('option')
+                    //apaga todas as musicas no dropdown
+                    if(cantor.includes(string_atual) == true || titulo.includes(string_atual) == true){
+                        option.value = titulo;
+                        list.appendChild(option);
+                    }
+                }
+            })
+            
+    }
 
     return (
         <Navbar bg="black" expand="lg">
@@ -38,8 +63,11 @@ export default function Header(props) {
                                 }} to="/" style={{ textDecoration: "none", color: "white" }} >Logout</Link>
 
                             )}
+                        <input style={{ float: "right", display: "absolute",color:'black'}} 
+                        type="text" name="product" list="musicas_procuradas"
+                        onChange={(e) => setBusca(e.target.value)}/>
+                        <datalist id="musicas_procuradas"></datalist>
                         </Nav.Link>
-
                         {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px", position: "absolute", right: 0 }}><Link to="/edit" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
 
 
