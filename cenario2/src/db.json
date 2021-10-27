@@ -48,6 +48,54 @@
       "noticias": true,
       "termos": true,
       "id": 1
+    },
+    {
+      "nomePlaylist": "dfgdfg",
+      "descricaoPlaylist": "segfsgsgs",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 2
+    },
+    {
+      "nomePlaylist": "turuuuu",
+      "descricaoPlaylist": "turuRUUUUUUUUUUUUUUU",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 3
+    },
+    {
+      "nomePlaylist": "PRUUUUUUUUUUUUU",
+      "descricaoPlaylist": "ARRRRRRRRRRRRRRRRRRRRRR",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 4
+    },
+    {
+      "nomePlaylist": "reherh",
+      "descricaoPlaylist": "herherherh",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 5
+    },
+    {
+      "nomePlaylist": "as",
+      "descricaoPlaylist": "fasfaf",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 6
+    },
+    {
+      "nomePlaylist": "hreherh",
+      "descricaoPlaylist": "wrherherhe",
+      "idPlaylist": "",
+      "imagePlaylist": "",
+      "musicasPlaylist": [],
+      "id": 7
     }
   ],
   "playlists": [
@@ -77,60 +125,60 @@
   ],
   "musicas": [
     {
-        "id_musica": 0,
-        "Cantor": "Lil Nas X",
-        "titulo_musica": "Industry Baby",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/INDUSTRY_BABY.mp3"
+      "id_musica": 0,
+      "Cantor": "Lil Nas X",
+      "titulo_musica": "Industry Baby",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/INDUSTRY_BABY.mp3"
     },
     {
-        "id_musica": 1,
-        "Cantor": "Rebbeca Sugar",
-        "titulo_musica": "Lofi 01",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Lofi_01.mp3"
+      "id_musica": 1,
+      "Cantor": "Rebbeca Sugar",
+      "titulo_musica": "Lofi 01",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Lofi_01.mp3"
     },
     {
-        "id_musica": 2,
-        "Cantor": "Blonde Redhead",
-        "titulo_musica": "For the Damaged Coda",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Evil_Morty_Theme.mp3"
+      "id_musica": 2,
+      "Cantor": "Blonde Redhead",
+      "titulo_musica": "For the Damaged Coda",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Evil_Morty_Theme.mp3"
     },
     {
-        "id_musica": 3,
-        "Cantor": "Sebastien -NicolArmarfi-",
-        "titulo_musica": "Wiosna",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Wiosna.mp3"
+      "id_musica": 3,
+      "Cantor": "Sebastien -NicolArmarfi-",
+      "titulo_musica": "Wiosna",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Wiosna.mp3"
     },
     {
-        "id_musica": 4,
-        "Cantor": "Ali",
-        "titulo_musica": "Lost in Paradise",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Lost_in_paradise.mp3"
+      "id_musica": 4,
+      "Cantor": "Ali",
+      "titulo_musica": "Lost in Paradise",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Lost_in_paradise.mp3"
     },
     {
-        "id_musica": 5,
-        "Cantor": "Lil Nas X",
-        "titulo_musica": "Old Town Road",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Old_Town_Road.mp3"
+      "id_musica": 5,
+      "Cantor": "Lil Nas X",
+      "titulo_musica": "Old Town Road",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Old_Town_Road.mp3"
     },
     {
-        "id_musica": 6,
-        "Cantor": "Lil Nas X",
-        "titulo_musica": "Montero",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Montero.mp3"
+      "id_musica": 6,
+      "Cantor": "Lil Nas X",
+      "titulo_musica": "Montero",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Montero.mp3"
     },
     {
-        "id_musica": 7,
-        "Cantor": "Ali",
-        "titulo_musica": "Wild Side",
-        "imagem": "./Images/Industry_Baby.png",
-        "musica": "./musicas/Wild_Side.mp3"
+      "id_musica": 7,
+      "Cantor": "Ali",
+      "titulo_musica": "Wild Side",
+      "imagem": "./Images/Industry_Baby.png",
+      "musica": "./musicas/Wild_Side.mp3"
     }
-    ]
+  ]
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import axios from 'axios'
 import Card from '../../js/Card'
+import Toast from "../../js/Toast";
 
 import playlist from "../../../Mocks/playlist";
 import { Link } from "react-router-dom";
@@ -15,7 +16,8 @@ export default function Home() {
     const [descricaoPlaylist, setDescricaoPlaylist] = useState('');
     const [idPlaylist, setIdPlaylist] = useState('');
     const [imagePlaylist, setImagePlaylist] = useState('');
-    const [musicasPlaylist, setMusicasPlaylist] = useState([]);
+
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
@@ -28,52 +30,45 @@ export default function Home() {
 
     }, [])
 
+    var cor;
+    var text;
     async function cadastrarPlaylist(e) {
         e.preventDefault()
 
-        if (email == confirmarEmail && email.length > 0) {
-            let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists: [] }
-            users.push(dados)
-            console.log(users)
+        if (nomePlaylist.length > 0) {
+            let dados = { nomePlaylist, descricaoPlaylist, idPlaylist, imagePlaylist, musicasPlaylist: [] }
       
-            axios.post("http://localhost:3001/users", dados)
+            axios.post("http://localhost:3001/playlists", dados)
               .then(res => console.log(res.data))
-              
-            setEmail("")
-            setConfirmarEmail("")
-            setSenha("")
-            setNome("")
-            setDia("")
-            setMes("")
-            setAno("")
-            setSexo("")
-            setNoticias(false)
-            setTermos(false)
+             
+            setNomePlaylist("")  
+            setDescricaoPlaylist("")
+            setIdPlaylist("")
+            setImagePlaylist("")
             cor = '#1ab26b'
-            text = 'Cadastro realizado com sucesso!'
-      
-            //Redirecionar página, porém não precisa no momento
-            setRedirect(true)
+            text = 'Playlist cadastrada com sucesso!'
       
           } else {
       
             cor = 'red'
-            text = 'Emails não coincidem!'
-      
+            text = 'Escolha um nome para a Playlist!'
       
           }
+    
       
-          //Mostrar toast
-          setVisible(true)
-      
-          setTimeout(() => {
+        //Mostrar toast
+        setVisible(true)
+
+        setTimeout(() => {
             setVisible(false)
-          }, 2000);
+        }, 2000);
+
       
     }
 
     return (
         <div class="escopo-primary">
+            {visible == true ? <Toast text={text} color={cor} onClick={setTimeout(() => { text = ''; cor = '' }, 2000)} /> : <></>}
             <div class="escopo-secundary">
                 <div class="container">
                     <div class="row d-grid align-items-center justify-content-center" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(2, 320px)', gridAutoFlow: 'row' }}>
@@ -95,11 +90,11 @@ export default function Home() {
                                             <div style={{ width: '100%' }}>
                                                 <div className="inputField d-flex align-items-start flex-column py-3">
                                                     <label>Nome da nova Playlist</label>
-                                                    <input required type="text" class="bg-transparent border-0" style={{ width: "100%" }} />
+                                                    <input value={nomePlaylist} required type="text" class="bg-transparent border-0" onChange={(e) => setNomePlaylist(e.target.value)} style={{ width: "100%" }} />
                                                 </div>
                                                 <div className="inputField d-flex align-items-start flex-column py-3">
                                                     <label>Descrição</label>
-                                                    <input required type="text" class="bg-transparent border-0" style={{ width: "100%" }} />
+                                                    <input value={descricaoPlaylist} required type="text" class="bg-transparent border-0" onChange={(e) => setDescricaoPlaylist(e.target.value)} style={{ width: "100%" }} />
                                                 </div>
                                             </div>
                                         </div>
