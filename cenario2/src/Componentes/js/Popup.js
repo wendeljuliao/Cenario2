@@ -11,20 +11,19 @@ export default class Popup extends Component {
             title_valor: "",
             sub_valor: "",
             bgimg_valor: "",
-            id_valor: "",
+            //id_valor: "",
             video_valor: "",
         }
     }
 
     teste() {
         document.getElementById("popup" + this.props.id).style.display = 'none'
-
     }
 
 
     render() {
         return (
-            <div class="popup-bg" id={"popup" + this.props.id} >
+            <div class="popup-bg" /*id={"popup" + this.props.id}*/ >
                 <div class="escopo-popup">
                     <video muted autoPlay loop>
                         <source src={this.props.video} type="video/mp4" />

@@ -26,3 +26,30 @@
   border-radius: 10px;
   transition: 0.4s;
 }
+
+.card-cadastro{
+  background-color: #2E2E2E !important;
+  background: no-repeat center;
+  background-size: contain;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+  width: 300px;
+  height: 270px;
+  transition: 0.2s;
+}
+
+.card-cadastro svg{
+  fill: white;
+  height: 116px!important;
+  width: auto;
+}
+
+.card-cadastro:hover{
+  background-color: #1ab26b !important;
+  cursor: pointer;
+}
