@@ -50,7 +50,7 @@ function App() {
 
         <Route path="/git" component={Github} />
 
-        <Route path="/cadastro" component={Busca} />
+        <Route path="/cadastro" component={Formulario} />
 
         <Route path="/edit" component={EditFormulario} />
 
