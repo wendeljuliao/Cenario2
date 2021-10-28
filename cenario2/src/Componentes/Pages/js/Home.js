@@ -85,6 +85,10 @@ export default function Home() {
                         )}
 
                         <a href="#" onClick={() => setIsModalVisible(true)} className="d-flex justify-content-center align-items-center" style={{padding: '0 0', margin: '0 10px'}}>
+                            <div className="card-cadastro d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{fill: '#111111'}} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
+                            </div>
+                        </a>    
                             
                             {isModalVisible ? (
                                 <div class="popup-bg" /*id={"popup" + this.props.id}*/ >
@@ -117,10 +121,6 @@ export default function Home() {
                                 </div>
                             ) : null}
 
-                            <div className="card-cadastro d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{fill: '#111111'}} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
-                            </div>
-                        </a>    
                         
                     </div>
                 </div>
@@ -130,3 +130,5 @@ export default function Home() {
     )
 
 }
+
+//npx json-server --watch src/db.json --port 3001
