@@ -15,7 +15,8 @@ export default function Home() {
     const [sub, setsub] = useState('');
     const [id, setid] = useState('');
     const [image, setimage] = useState('');
-    const history = useHistory();
+    const [isDelete, setIsDelete] = useState(false);
+    const [isSave, setIsSave] = useState(false);
 
     const [visible, setVisible] = useState(false);
 
@@ -30,7 +31,10 @@ export default function Home() {
             .then((res) => setPlaylists(res.data))
         }
 
-    }, [isModalVisible])
+        setIsDelete(false)
+        setIsSave(false)
+
+    }, [isModalVisible, isDelete, isSave])
 
     var cor;
     var text;
@@ -51,8 +55,8 @@ export default function Home() {
             text = 'Playlist cadastrada com sucesso!'
 
 
-
             setIsModalVisible(false)
+            setIsSave(true)
       
           } else {
       
@@ -81,12 +85,12 @@ export default function Home() {
 
                         {playlists.map((item) => {
                             return (
-                                <Link style={{ width: 390 }} to={`/playlist/${item.id}`}><Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} /></Link>
+                                <Link style={{ width: 390 }} to={`/playlist/${item.id}`}><Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} setIsDelete={setIsDelete} /></Link>
                             )
                         }
                         )}
 
-                        <a href="#" onClick={() => setIsModalVisible(true)} className="d-flex justify-content-center align-items-center" style={{padding: '0 0', margin: '0 10px'}}>
+                        <a onClick={(e) => {e.preventDefault(); setIsModalVisible(true)}} className="d-flex justify-content-center align-items-center" style={{padding: '0 0', margin: '0 10px'}}>
                             <div className="card-cadastro d-flex justify-content-center align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{fill: '#111111'}} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
                             </div>
@@ -95,7 +99,7 @@ export default function Home() {
                             {isModalVisible ? (
                                 <div class="popup-bg" /*id={"popup" + this.props.id}*/ >
                                     <form class="escopo-popup" onSubmit={(e) => cadastrarPlaylist(e)}>
-                                        <a href="#" id="close" onClick={() => setIsModalVisible(false)}/>
+                                        <a id="close" onClick={(e) => { e.preventDefault(); setIsModalVisible(false)}}/>
                                         <div className="campos w-100 p-5">
                                             <div style={{ width: '100%' }}>
                                                 <div className="inputField d-flex align-items-start flex-column py-3">
