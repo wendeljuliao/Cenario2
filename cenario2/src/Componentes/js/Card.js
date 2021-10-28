@@ -1,12 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./../css/Card.css";
 import Popup from "./Popup";
 import axios from "axios";
 
 export default class Card extends Component {
 
+    
+
     constructor(props) {
         super(props);
+        this.deletePlaylist = this.deletePlaylist.bind()
 
         this.state = {
             title_valor: "",
@@ -18,19 +21,20 @@ export default class Card extends Component {
 
     }
 
-    deletePlaylist(){
+    deletePlaylist(e, num) {
+        e.preventDefault()
 
-        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-
-        axios.get(`http://localhost:3001/playlists/${usuario}`)
-        .then(res => console.log(res.data))
-
+        console.log("...")
+        axios.delete(`http://localhost:3001/playlists/${num}`)
+            .then((res) => {console.log(res.data)})
+        console.log("...")
     }
 
     render() {
+    
         return (
             <div class="line position-relative">
-                <a href="#" onClick={this.deletePlaylist} className="botaoFecha position-absolute m-3" style={{top: 0, right: 0}}><img src="../../../Images/close_icon.png" style={{width: '30px', height: 'auto'}}/></a>
+                <a onClick={(e) => this.deletePlaylist(e, this.props.num)} className="botaoFecha position-absolute m-3" style={{top: 0, right: 0}}><img src="../../../Images/close_icon.png" style={{width: '30px', height: 'auto'}}/></a>
                 <div class="body" style={{ backgroundImage: `url(${this.props.bgimg})` }}>
                     <label class="title-card">{this.props.title}</label>
                     <label class="sub-card">{this.props.sub}</label>

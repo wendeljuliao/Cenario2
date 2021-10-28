@@ -5,7 +5,7 @@ import Card from '../../js/Card'
 import Toast from "../../js/Toast";
 
 import playlist from "../../../Mocks/playlist";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Home() {
     const [playlists, setPlaylists] = useState([]);
@@ -15,6 +15,7 @@ export default function Home() {
     const [sub, setsub] = useState('');
     const [id, setid] = useState('');
     const [image, setimage] = useState('');
+    const history = useHistory();
 
     const [visible, setVisible] = useState(false);
 
@@ -29,7 +30,7 @@ export default function Home() {
             .then((res) => setPlaylists(res.data))
         }
 
-    }, [])
+    }, [isModalVisible])
 
     var cor;
     var text;
@@ -48,6 +49,8 @@ export default function Home() {
             setimage("")
             cor = '#1ab26b'
             text = 'Playlist cadastrada com sucesso!'
+
+
 
             setIsModalVisible(false)
       
