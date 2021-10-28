@@ -45,9 +45,23 @@
     border-radius: 10px;
 }
 
+.botaoFecha{
+    display: none;
+    padding: 3px;
+    border-radius: 50%;
+}
+
 .escopo-secundary .line:hover{
   background-color: #414141;
   cursor: pointer;
+}
+
+.escopo-secundary .line:hover .botaoFecha{
+    display: flex;
+}
+
+.escopo-secundary .line .botaoFecha:hover{
+    background-color: red;
 }
 
 a{

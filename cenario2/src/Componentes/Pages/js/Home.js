@@ -11,7 +11,6 @@ export default function Home() {
     const [playlists, setPlaylists] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
-    
     const [title, settitle] = useState('');
     const [sub, setsub] = useState('');
     const [id, setid] = useState('');
