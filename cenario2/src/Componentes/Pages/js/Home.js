@@ -7,28 +7,33 @@ import Toast from "../../js/Toast";
 import playlist from "../../../Mocks/playlist";
 import { Link, useHistory } from "react-router-dom";
 
-export default function Home() {
+export default function Home(props) {
     const [playlists, setPlaylists] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const [title, settitle] = useState('');
     const [sub, setsub] = useState('');
-    const [id, setid] = useState('');
-    const [image, setimage] = useState('');
+    const [imagem, setimagem] = useState('');
     const [isDelete, setIsDelete] = useState(false);
     const [isSave, setIsSave] = useState(false);
 
     const [visible, setVisible] = useState(false);
 
+
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
         if (usuario !== null) {
-            setPlaylists(usuario.playlists)
+
+            axios.get(`http://localhost:3001/users?email=${usuario.email}`)
+                .then((res) => setPlaylists(res.data[0].playlists))
+
 
 
         } else {
             axios.get("http://localhost:3001/playlists")
-            .then((res) => setPlaylists(res.data))
+                .then((res) => setPlaylists(res.data))
+
+
         }
 
         setIsDelete(false)
@@ -42,30 +47,36 @@ export default function Home() {
         e.preventDefault()
 
         if (title.length > 0) {
-            let dados = { title, sub, id, image, musicas: [] }
-      
-            axios.post("http://localhost:3001/playlists", dados)
-              .then(res => console.log(res.data))
-             
-            settitle("")  
+            const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+            console.log(usuario)
+
+            let dados = { title, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
+
+            usuario.playlists.push(dados)
+            //axios.post(`http://localhost:3001/playlists`, dados)
+            //    .then(res => console.log(res.data))
+
+            axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
+                .then(res => console.log(res.data))
+
+            settitle("")
             setsub("")
-            setid("")
-            setimage("")
+            setimagem("")
             cor = '#1ab26b'
             text = 'Playlist cadastrada com sucesso!'
 
 
             setIsModalVisible(false)
             setIsSave(true)
-      
-          } else {
-      
+
+        } else {
+
             cor = 'red'
             text = 'Escolha um nome para a Playlist!'
-      
-          }
-    
-      
+
+        }
+
+
         //Mostrar toast
         setVisible(true)
 
@@ -73,7 +84,7 @@ export default function Home() {
             setVisible(false)
         }, 2000);
 
-      
+
     }
 
     return (
@@ -90,44 +101,45 @@ export default function Home() {
                         }
                         )}
 
-                        <a onClick={(e) => {e.preventDefault(); setIsModalVisible(true)}} className="d-flex justify-content-center align-items-center" style={{padding: '0 0', margin: '0 10px'}}>
+                        <a onClick={(e) => { e.preventDefault(); setIsModalVisible(true) }} className="d-flex justify-content-center align-items-center" style={{ padding: '0 0', margin: '0 10px' }}>
                             <div className="card-cadastro d-flex justify-content-center align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{fill: '#111111'}} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{ fill: '#111111' }} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" /></svg>
                             </div>
-                        </a>    
-                            
-                            {isModalVisible ? (
-                                <div class="popup-bg" /*id={"popup" + this.props.id}*/ >
-                                    <form class="escopo-popup" onSubmit={(e) => cadastrarPlaylist(e)}>
-                                        <a id="close" onClick={(e) => { e.preventDefault(); setIsModalVisible(false)}}/>
-                                        <div className="campos w-100 p-5">
-                                            <div style={{ width: '100%' }}>
-                                                <div className="inputField d-flex align-items-start flex-column py-3">
-                                                    <label>Nome da nova Playlist</label>
-                                                    <input value={title} required type="text" class="bg-transparent border-0" onChange={(e) => settitle(e.target.value)} style={{ width: "100%" }} />
-                                                </div>
-                                                <div className="inputField d-flex align-items-start flex-column py-3">
-                                                    <label>Descrição</label>
-                                                    <input value={sub} required type="text" class="bg-transparent border-0" onChange={(e) => setsub(e.target.value)} style={{ width: "100%" }} />
-                                                </div>
+                        </a>
+
+
+                        {isModalVisible ? (
+                            <div class="popup-bg" /*id={"popup" + this.props.id}*/ >
+                                <form class="escopo-popup" onSubmit={(e) => cadastrarPlaylist(e)}>
+                                    <a id="close" onClick={(e) => { e.preventDefault(); setIsModalVisible(false) }} />
+                                    <div className="campos w-100 p-5">
+                                        <div style={{ width: '100%' }}>
+                                            <div className="inputField d-flex align-items-start flex-column py-3">
+                                                <label>Nome da nova Playlist</label>
+                                                <input value={title} required type="text" class="bg-transparent border-0" onChange={(e) => settitle(e.target.value)} style={{ width: "100%" }} />
+                                            </div>
+                                            <div className="inputField d-flex align-items-start flex-column py-3">
+                                                <label>Descrição</label>
+                                                <input value={sub} required type="text" class="bg-transparent border-0" onChange={(e) => setsub(e.target.value)} style={{ width: "100%" }} />
                                             </div>
                                         </div>
-                                        <div className="w-100 d-flex justify-content-center align-items-center">
-                                            <input type="submit" style={{
-                                                backgroundColor: "#1ab26b",
-                                                border: "none",
-                                                padding: '14px 38px',
-                                                borderRadius: "50px",
-                                                fontSize: 'medium',
-                                                fontWeight: 'bold',
-                                                color: 'black',
-                                            }}/>
-                                        </div>
-                                    </form>
-                                </div>
-                            ) : null}
+                                    </div>
+                                    <div className="w-100 d-flex justify-content-center align-items-center">
+                                        <input type="submit" style={{
+                                            backgroundColor: "#1ab26b",
+                                            border: "none",
+                                            padding: '14px 38px',
+                                            borderRadius: "50px",
+                                            fontSize: 'medium',
+                                            fontWeight: 'bold',
+                                            color: 'black',
+                                        }} />
+                                    </div>
+                                </form>
+                            </div>
+                        ) : null}
 
-                        
+
                     </div>
                 </div>
 

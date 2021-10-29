@@ -44,7 +44,7 @@ function App() {
     <Router>
       <Header login={login} setLogin={setLogin} nome={usuario.nome} />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" login={login} component={Home} />
 
         <Route path="/faq" component={FAQ} />
 

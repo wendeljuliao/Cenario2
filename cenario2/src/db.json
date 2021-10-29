@@ -48,54 +48,6 @@
       "noticias": true,
       "termos": true,
       "id": 1
-    },
-    {
-      "nomePlaylist": "dfgdfg",
-      "descricaoPlaylist": "segfsgsgs",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 2
-    },
-    {
-      "nomePlaylist": "turuuuu",
-      "descricaoPlaylist": "turuRUUUUUUUUUUUUUUU",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 3
-    },
-    {
-      "nomePlaylist": "PRUUUUUUUUUUUUU",
-      "descricaoPlaylist": "ARRRRRRRRRRRRRRRRRRRRRR",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 4
-    },
-    {
-      "nomePlaylist": "reherh",
-      "descricaoPlaylist": "herherherh",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 5
-    },
-    {
-      "nomePlaylist": "as",
-      "descricaoPlaylist": "fasfaf",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 6
-    },
-    {
-      "nomePlaylist": "hreherh",
-      "descricaoPlaylist": "wrherherhe",
-      "idPlaylist": "",
-      "imagePlaylist": "",
-      "musicasPlaylist": [],
-      "id": 7
     }
   ],
   "playlists": [
@@ -113,12 +65,12 @@
         {
           "bgimg": "/Images/Industry_Baby.png",
           "id": 1,
-          "video": "/musicas/Lofi_01.mp3"
+          "video": "/musicas/Lost_in_paradise.mp3"
         },
         {
           "bgimg": "/Images/Industry_Baby.png",
           "id": 2,
-          "video": "/musicas/Lost_in_paradise.mp3"
+          "video": "/musicas/Lofi_01.mp3"
         }
       ]
     }
