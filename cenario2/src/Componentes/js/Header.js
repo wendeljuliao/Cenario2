@@ -77,10 +77,10 @@ export default function Header(props) {
                                 }} to="/login" style={{ textDecoration: "none", color: "white" }} >Logout</Link>
                                     
                             )}
-                        <input style={{ float: "right", display: "absolute",color:'black'}} 
+                        {/*<input style={{ float: "right", display: "absolute",color:'black'}} 
                         type="text" name="product" list="musicas_procuradas"
                         onChange={(e) => setBusca(e.target.value)}/>
-                        <datalist id="musicas_procuradas"></datalist>
+                            <datalist id="musicas_procuradas"></datalist>*/}
                         
                         </Nav.Link>
                         {props.nome != null ? <Nav.Link style={{ color: "white", fontSize: "20px", position: "absolute", right: 0 }}><Link to="/edit" style={{ textDecoration: "none", color: "white" }}>{props.nome}</Link></Nav.Link> : <></>}
