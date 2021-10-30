@@ -19,6 +19,7 @@ export default function Home(props) {
 
     const [visible, setVisible] = useState(false);
 
+    const [logado, setLogado] = useState(false);
 
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
@@ -27,19 +28,20 @@ export default function Home(props) {
             axios.get(`http://localhost:3001/users?email=${usuario.email}`)
                 .then((res) => setPlaylists(res.data[0].playlists))
 
-
+            setLogado(true)
 
         } else {
             axios.get("http://localhost:3001/playlists")
                 .then((res) => setPlaylists(res.data))
 
+            setLogado(false)
 
         }
 
         setIsDelete(false)
         setIsSave(false)
 
-    }, [isModalVisible, isDelete, isSave])
+    }, [isDelete, isSave])
 
     var cor;
     var text;
@@ -50,9 +52,11 @@ export default function Home(props) {
             const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
             console.log(usuario)
 
-            let dados = { title, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
+            let dados = { id: usuario.playlists[usuario.playlists.length - 1].id + 1, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
 
             usuario.playlists.push(dados)
+
+            localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
             //axios.post(`http://localhost:3001/playlists`, dados)
             //    .then(res => console.log(res.data))
 
@@ -101,12 +105,13 @@ export default function Home(props) {
                         }
                         )}
 
-                        <a onClick={(e) => { e.preventDefault(); setIsModalVisible(true) }} className="d-flex justify-content-center align-items-center" style={{ padding: '0 0', margin: '0 10px' }}>
-                            <div className="card-cadastro d-flex justify-content-center align-items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{ fill: '#111111' }} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" /></svg>
-                            </div>
-                        </a>
-
+                        {logado ?
+                            <a onClick={(e) => { e.preventDefault(); setIsModalVisible(true) }} className="d-flex justify-content-center align-items-center" style={{ padding: '0 0', margin: '0 10px' }}>
+                                <div className="card-cadastro d-flex justify-content-center align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style={{ fill: '#111111' }} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" /></svg>
+                                </div>
+                            </a>
+                            : null}
 
                         {isModalVisible ? (
                             <div class="popup-bg" /*id={"popup" + this.props.id}*/ >

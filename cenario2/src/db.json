@@ -5,7 +5,7 @@
       "senha": "123",
       "nome": "João",
       "dia": "01",
-      "mes": "01",
+      "mes": "Abril",
       "ano": "2000",
       "sexo": "Masculino",
       "noticias": true,
@@ -33,6 +33,42 @@
               "video": "/musicas/Lofi_01.mp3"
             }
           ]
+        },
+        {
+          "id": 1,
+          "sub": "aa",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 2,
+          "sub": "ss",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 3,
+          "sub": "dd",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 4,
+          "sub": "ss",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 5,
+          "sub": "as",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 6,
+          "sub": "aa",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
         }
       ],
       "id": 0
@@ -53,6 +89,29 @@
   "playlists": [
     {
       "id": 0,
+      "title": "Lil Nas X",
+      "sub": "A melhor",
+      "imagem": "/Images/Industry_Baby.png",
+      "musicas": [
+        {
+          "bgimg": "/Images/Industry_Baby.png",
+          "id": 0,
+          "video": "/musicas/Lofi_01.mp3"
+        },
+        {
+          "bgimg": "/Images/Industry_Baby.png",
+          "id": 1,
+          "video": "/musicas/Lost_in_paradise.mp3"
+        },
+        {
+          "bgimg": "/Images/Industry_Baby.png",
+          "id": 2,
+          "video": "/musicas/Lofi_01.mp3"
+        }
+      ]
+    },
+    {
+      "id": 1,
       "title": "Lil Nas X",
       "sub": "A melhor",
       "imagem": "/Images/Industry_Baby.png",

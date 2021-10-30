@@ -74,8 +74,8 @@ export default function Header(props) {
                                 <Link onClick={() => {
                                     localStorage.removeItem("usuarioLogado")
                                     props.setLogin(false)
-                                }} to="/" style={{ textDecoration: "none", color: "white" }} >Logout</Link>
-
+                                }} to="/login" style={{ textDecoration: "none", color: "white" }} >Logout</Link>
+                                    
                             )}
                         <input style={{ float: "right", display: "absolute",color:'black'}} 
                         type="text" name="product" list="musicas_procuradas"

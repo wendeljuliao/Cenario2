@@ -153,7 +153,7 @@ function EditFormulario() {
                             </div>
                         </div>
 
-                        <input type="submit" style={{ margin: 20 }} value="Inscreva-se" class="inscrevase" />
+                        <input type="submit" style={{ margin: 20 }} value="Editar" class="inscrevase" />
 
                     </form>
                 </div>
