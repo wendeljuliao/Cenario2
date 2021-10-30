@@ -35,12 +35,6 @@
           ]
         },
         {
-          "id": 1,
-          "sub": "aa",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
           "id": 2,
           "sub": "ss",
           "imagem": "/Images/Industry_Baby.png",
@@ -53,12 +47,6 @@
           "musicas": []
         },
         {
-          "id": 4,
-          "sub": "ss",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
           "id": 5,
           "sub": "as",
           "imagem": "/Images/Industry_Baby.png",
@@ -66,7 +54,7 @@
         },
         {
           "id": 6,
-          "sub": "aa",
+          "sub": "we",
           "imagem": "/Images/Industry_Baby.png",
           "musicas": []
         }
