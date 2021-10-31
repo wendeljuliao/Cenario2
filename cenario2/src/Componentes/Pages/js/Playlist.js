@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import '../css/Playlist.css'
 
 import axios from 'axios'
+import { set } from "react-hook-form";
 
 
 export default function Playlist() {
@@ -10,11 +11,12 @@ export default function Playlist() {
 
     const { id } = useParams();
     const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-    const playlist = usuario.playlists.find((p) => p.id == id)
+    const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
 
     const [logado, setLogado] = useState(false);
+    const [isDelete, setIsDelete] = useState(false)
 
-    const [musicaEscolhida, setMusicaEscolhida] = useState({titulo_musica: ""});
+    const [musicaEscolhida, setMusicaEscolhida] = useState({ titulo_musica: "" });
 
     useEffect(() => {
 
@@ -30,9 +32,9 @@ export default function Playlist() {
             setLogado(false)
         }
 
+        setIsDelete(false)
 
-
-    }, [usuario])
+    }, [usuario, isDelete])
 
 
     function removeOptions(selectElement) {
@@ -53,7 +55,7 @@ export default function Playlist() {
 
                 //apaga todas as musicas no dropdown
                 removeOptions(document.getElementById('musicas_procuradas'));
-                
+
 
                 for (let i in res.data) {
 
@@ -70,7 +72,7 @@ export default function Playlist() {
                         list.appendChild(option);
 
                         setMusicaEscolhida(res.data[i]);
-                        
+
                     }
                 }
 
@@ -81,16 +83,16 @@ export default function Playlist() {
             })
 
 
-            setTimeout(() => {
-                console.log(musicaEscolhida)
-            }, 2000)
-  
+        setTimeout(() => {
+            console.log(musicaEscolhida)
+        }, 2000)
+
     }
 
     function salvarMusica(e) {
         e.preventDefault();
 
-        console.log(usuario)        
+        console.log(usuario)
 
         for (let i = 0; i < usuario.playlists.length; i++) {
             if (usuario.playlists[i].id == playlist.id) {
@@ -106,6 +108,35 @@ export default function Playlist() {
             .then(res => console.log(res.data))
     }
 
+    function deleteMusic(e, num) {
+        e.preventDefault()
+
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+
+        for (let i = 0; i < usuario.playlists.length; i++) {
+            if (usuario.playlists[i].id == playlist.id) {
+                for (let j = 0; j < usuario.playlists[i].musicas.length; j++) {
+                    if (usuario.playlists[i].musicas[j].id_musica == num) {
+                        usuario.playlists[i].musicas.splice(j, 1)
+                        break
+                    }
+
+                }
+            }
+        }
+
+
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
+
+        console.log("...")
+        axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
+            .then((res) => { console.log(res.data) })
+        console.log("...")
+
+        setIsDelete(true)
+
+    }
+
     return (
         <div class="escopo-primary">
             <div class="escopo-secundary p-3">
@@ -119,9 +150,12 @@ export default function Playlist() {
                                     <audio controls className="w-100"> <source src={element.musica} type="audio/mp3"></source></audio>
                                     {console.log(element)}
                                 </div>
-
+                                {logado ?
+                                    <a onClick={(e) => deleteMusic(e, element.id_musica)}><img src="/Images/close_icon.png" style={{ width: '30px', height: 'auto' }} /></a>
+                                    : null}
                             </div>
                         </div>
+
                     )
                 })}
 
@@ -129,16 +163,17 @@ export default function Playlist() {
                     <div className="playlist-line d-flex align-items-center justify-content-center w-100 m-3">
                         <div className="d-flex align-items-center justify-content-center flex-row m-2" style={{ width: "80%" }}>
                             <input style={{ float: "right", display: "absolute", color: 'black' }}
-                                type="text" name="product" list="musicas_procuradas" 
+                                type="text" name="product" list="musicas_procuradas"
                                 onChange={(e) => {
-                                    setBusca(e.target.value)}} />
+                                    setBusca(e.target.value)
+                                }} />
                             <datalist id="musicas_procuradas"></datalist>
                             <a onClick={(e) => salvarMusica(e)}><svg xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" style={{ fill: '#2e2e2e' }} viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" /></svg>
                             </a>
                         </div>
                     </div>
                     : null}
-                    
+
             </div>
         </div>
     )

@@ -32,25 +32,11 @@
               "musica": "/musicas/Lofi_01.mp3"
             },
             {
-              "id_musica": 2,
-              "Cantor": "Blonde Redhead",
-              "titulo_musica": "For the Damaged Coda",
+              "id_musica": 1,
+              "Cantor": "Rebbeca Sugar",
+              "titulo_musica": "Lofi 01",
               "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/Evil_Morty_Theme.mp3"
-            },
-            {
-              "id_musica": 2,
-              "Cantor": "Blonde Redhead",
-              "titulo_musica": "For the Damaged Coda",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/Evil_Morty_Theme.mp3"
-            },
-            {
-              "id_musica": 0,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Industry Baby",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/INDUSTRY_BABY.mp3"
+              "musica": "/musicas/Lofi_01.mp3"
             }
           ]
         },
@@ -128,42 +114,125 @@
       "imagem": "/Images/Industry_Baby.png",
       "musicas": [
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 0,
-          "video": "/musicas/Lofi_01.mp3"
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
         },
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 1,
-          "video": "/musicas/Lost_in_paradise.mp3"
+          "id_musica": 1,
+          "Cantor": "Rebbeca Sugar",
+          "titulo_musica": "Lofi 01",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Lofi_01.mp3"
         },
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 2,
-          "video": "/musicas/Lofi_01.mp3"
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
         }
       ]
     },
     {
       "id": 1,
-      "title": "Lil Nas X",
+      "title": "Lil Nas X1",
       "sub": "A melhor",
       "imagem": "/Images/Industry_Baby.png",
       "musicas": [
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 0,
-          "video": "/musicas/Lofi_01.mp3"
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
         },
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 1,
-          "video": "/musicas/Lost_in_paradise.mp3"
+          "id_musica": 1,
+          "Cantor": "Rebbeca Sugar",
+          "titulo_musica": "Lofi 01",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Lofi_01.mp3"
         },
         {
-          "bgimg": "/Images/Industry_Baby.png",
-          "id": 2,
-          "video": "/musicas/Lofi_01.mp3"
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lil Nas X2",
+      "sub": "A melhor",
+      "imagem": "/Images/Industry_Baby.png",
+      "musicas": [
+        {
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
+        },
+        {
+          "id_musica": 1,
+          "Cantor": "Rebbeca Sugar",
+          "titulo_musica": "Lofi 01",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Lofi_01.mp3"
+        },
+        {
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 2,
+          "Cantor": "Blonde Redhead",
+          "titulo_musica": "For the Damaged Coda",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/Evil_Morty_Theme.mp3"
+        },
+        {
+          "id_musica": 0,
+          "Cantor": "Lil Nas X",
+          "titulo_musica": "Industry Baby",
+          "imagem": "/Images/Industry_Baby.png",
+          "musica": "/musicas/INDUSTRY_BABY.mp3"
         }
       ]
     }
