@@ -52,13 +52,14 @@ export default function Home(props) {
             const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
             console.log(usuario)
 
+            let dados = 0;
             if (usuario.playlists.length > 0) {
-                let dados = { id: usuario.playlists[usuario.playlists.length - 1].id + 1, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
+                dados = { id: usuario.playlists[usuario.playlists.length - 1].id + 1, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
 
             } else {
-                let dados = { id: 0, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
+                dados = { id: 0, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
             }
-
+            console.log(dados)
             usuario.playlists.push(dados)
 
             localStorage.setItem('usuarioLogado', JSON.stringify(usuario))

@@ -13,7 +13,7 @@ export default function Busca(props) {
                     var cantor = res.data[i]["Cantor"].toLowerCase();
                     var titulo = res.data[i]["titulo_musica"].toLowerCase();
                     var string_atual = e.toLowerCase();
-                    if(cantor.includes(string_atual) == true || titulo.includes(string_atual) == true){
+                    if(cantor.includes(string_atual) == true || titulo.includes(string_atual) == true && string_atual){
                         console.log(cantor)
                         console.log(titulo)
                         console.log("-------------------")
