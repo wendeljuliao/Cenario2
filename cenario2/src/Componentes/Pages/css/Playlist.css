@@ -14,7 +14,6 @@
 
 .playlist-line:hover label{
     color: #000000;
-    padding-right: 100% !important;
 }
 .playlist-line a, svg{
     transition: none;

@@ -142,7 +142,36 @@
           "id": 0,
           "sub": "sim",
           "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
+          "musicas": [
+            {
+              "id_musica": 6,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Montero",
+              "imagem": "/icones_musicas/montero_icon.jpg",
+              "musica": "/musicas/Montero.mp3"
+            },
+            {
+              "id_musica": 3,
+              "Cantor": "Sebastien -NicolArmarfi-",
+              "titulo_musica": "Wiosna",
+              "imagem": "/icones_musicas/wiosona_icon.jpg",
+              "musica": "/musicas/Wiosna.mp3"
+            },
+            {
+              "id_musica": 5,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Old Town Road",
+              "imagem": "/icones_musicas/old_town_road_icon.jpg",
+              "musica": "/musicas/Old_Town_Road.mp3"
+            },
+            {
+              "id_musica": 7,
+              "Cantor": "Ali",
+              "titulo_musica": "Wild Side",
+              "imagem": "/icones_musicas/wild_side_icon.jpg",
+              "musica": "/musicas/Wild_Side.mp3"
+            }
+          ]
         }
       ],
       "id": 3

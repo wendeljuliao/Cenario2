@@ -146,7 +146,7 @@ export default function Playlist() {
                             <img src={element.imagem} style={{ width: "100px", height: "100px", objectFit: "cover", marginRight: 10, borderRadius: 10 }} />
                             <div className="d-flex align-items-center justify-content-center flex-row m-2" style={{ width: "80%" }}>
                                 <div className="w-100">
-                                    <label>{element.titulo_musica} || Cantor: {element.Cantor}</label>
+                                    <label style={{ width: "600px"}}>{element.titulo_musica}</label>
                                     <audio controls className="w-100"> <source src={element.musica} type="audio/mp3"></source></audio>
                                     {console.log(element)}
                                 </div>

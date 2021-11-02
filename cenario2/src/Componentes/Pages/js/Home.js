@@ -51,17 +51,6 @@ export default function Home(props) {
         if (title.length > 0) {
             const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
             console.log(usuario)
-<<<<<<< HEAD
-
-            let dados = 0;
-            if (usuario.playlists.length > 0) {
-                dados = { id: usuario.playlists[usuario.playlists.length - 1].id + 1, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
-
-            } else {
-                dados = { id: 0, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
-            }
-            console.log(dados)
-=======
             var id = 0;
             
             if (usuario.playlists.length > 0) {
@@ -70,7 +59,6 @@ export default function Home(props) {
 
             let dados = { id: id, name: usuario.nametitle, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
             
->>>>>>> 76f355b82b883739612426bf94459c4c8db4fc59
             usuario.playlists.push(dados)
 
             localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
