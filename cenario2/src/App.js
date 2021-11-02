@@ -22,6 +22,7 @@ import Busca from './Componentes/Pages/js/Busca';
 function App() {
   const [login, setLogin] = useState(false);
   const [usuario, setUsuario] = useState({});
+  const [isEdit, setIsEdit] = useState(false);
 
 
 
@@ -35,10 +36,13 @@ function App() {
     if (login == true) {
       setUsuario(JSON.parse(localStorage.getItem('usuarioLogado')));
     } else {
-      setUsuario({nome: null})
+      setUsuario({ nome: null })
     }
-  }, [login])
-  
+
+    setIsEdit(false)
+
+  }, [login, isEdit])
+
 
   return (
     <Router>
@@ -52,7 +56,9 @@ function App() {
 
         <Route path="/cadastro" component={Formulario} />
 
-        <Route path="/edit" component={EditFormulario} />
+        <Route path="/edit">
+          <EditFormulario isEdit={isEdit} setIsEdit={setIsEdit} />
+        </Route>
 
         <Route path="/playlist/:id" component={Playlist} />
 

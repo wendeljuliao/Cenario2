@@ -13,7 +13,7 @@ import Toast from '../../js/Toast'
 var cor;
 var text;
 
-function EditFormulario() {
+function EditFormulario(props) {
     const [id, setID] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -67,6 +67,7 @@ function EditFormulario() {
             setVisible(false)
         }, 2000);
 
+        
         history.push('/')
 
     }
@@ -80,7 +81,10 @@ function EditFormulario() {
             <div className='ins' className="escopo-secundary">
                 <Title />
                 <div className='ins' className="escopo-secundary">
-                    <form onSubmit={(e) => editarCampos(e)} style={{ width: "80%", textAlign: "center" }}>
+                    <form onSubmit={(e) => {
+                        editarCampos(e)
+                        props.setIsEdit(true)
+                    }} style={{ width: "80%", textAlign: "center" }}>
                         <div className="inputField d-flex align-items-start flex-column">
                             <label>E-mail</label>
                             <input required type="email" class="bg-transparent border-0" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "100%" }} />

@@ -1,6 +1,7 @@
 {
   "users": [
     {
+      "id": 0,
       "email": "joao@hotmail.com",
       "senha": "123",
       "nome": "João",
@@ -90,8 +91,7 @@
             }
           ]
         }
-      ],
-      "id": 0
+      ]
     },
     {
       "email": "paulo123@gmail.com",
@@ -117,7 +117,7 @@
       "id": 4,
       "email": "paulo@hotmail.com",
       "senha": "123",
-      "nome": "paulooo",
+      "nome": "paulo",
       "dia": "ww",
       "mes": "Janeiro",
       "ano": "ww",
@@ -145,20 +145,13 @@
           "title": "123",
           "sub": "123",
           "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
-          "id": 2,
-          "title": "123",
-          "sub": "1111",
-          "imagem": "/Images/Industry_Baby.png",
           "musicas": [
             {
-              "id_musica": 6,
+              "id_musica": 0,
               "Cantor": "Lil Nas X",
-              "titulo_musica": "Montero",
-              "imagem": "/icones_musicas/montero_icon.jpg",
-              "musica": "/musicas/Montero.mp3"
+              "titulo_musica": "Industry Baby",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/INDUSTRY_BABY.mp3"
             },
             {
               "id_musica": 3,
@@ -166,22 +159,29 @@
               "titulo_musica": "Wiosna",
               "imagem": "/icones_musicas/wiosona_icon.jpg",
               "musica": "/musicas/Wiosna.mp3"
-            },
-            {
-              "id_musica": 5,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Old Town Road",
-              "imagem": "/icones_musicas/old_town_road_icon.jpg",
-              "musica": "/musicas/Old_Town_Road.mp3"
-            },
-            {
-              "id_musica": 7,
-              "Cantor": "Ali",
-              "titulo_musica": "Wild Side",
-              "imagem": "/icones_musicas/wild_side_icon.jpg",
-              "musica": "/musicas/Wild_Side.mp3"
             }
           ]
+        },
+        {
+          "id": 3,
+          "title": "aa",
+          "sub": "aa",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 4,
+          "title": "aa",
+          "sub": "as",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 5,
+          "title": "as",
+          "sub": "as",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
         }
       ]
     }
