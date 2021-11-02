@@ -51,7 +51,6 @@ export default function Home(props) {
         if (title.length > 0) {
             const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
             console.log(usuario)
-
             var id = 0;
 
             if (usuario.playlists.length > 0) {
