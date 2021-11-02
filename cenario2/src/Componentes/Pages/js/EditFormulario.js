@@ -50,7 +50,7 @@ function EditFormulario() {
     async function editarCampos(e) {
         e.preventDefault()
 
-        let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists}
+        let dados = { id, email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists}
 
 
         axios.put(`http://localhost:3001/users/${id}`, dados)

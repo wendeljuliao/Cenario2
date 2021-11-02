@@ -94,40 +94,6 @@
       "id": 0
     },
     {
-      "email": "wendelljuliao@hotmail.com",
-      "senha": "123",
-      "nome": "wwe",
-      "dia": "22",
-      "mes": "Fevereiro",
-      "ano": "2222",
-      "sexo": "Masculino",
-      "noticias": true,
-      "termos": true,
-      "id": 1
-    },
-    {
-      "email": "paulo7676@gmail.com",
-      "senha": "12345",
-      "nome": "paulinho",
-      "dia": "08",
-      "mes": "Fevereiro",
-      "ano": "2001",
-      "sexo": "Masculino",
-      "noticias": true,
-      "termos": true,
-      "playlists": [
-        0,
-        0,
-        {
-          "id": null,
-          "sub": "e",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        }
-      ],
-      "id": 2
-    },
-    {
       "email": "paulo123@gmail.com",
       "senha": "12345",
       "nome": "paulinho 2",
@@ -146,6 +112,49 @@
         }
       ],
       "id": 3
+    },
+    {
+      "id": 4,
+      "email": "paulo@hotmail.com",
+      "senha": "123",
+      "nome": "paulooo",
+      "dia": "ww",
+      "mes": "Janeiro",
+      "ano": "ww",
+      "sexo": "Masculino",
+      "noticias": true,
+      "termos": true,
+      "playlists": [
+        {
+          "id": 0,
+          "title": "ao",
+          "sub": "123",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": [
+            {
+              "id_musica": 0,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Industry Baby",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/INDUSTRY_BABY.mp3"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "123",
+          "sub": "123",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        },
+        {
+          "id": 2,
+          "title": "123",
+          "sub": "1111",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": []
+        }
+      ]
     }
   ],
   "playlists": [

@@ -12,43 +12,7 @@ import axios from 'axios';
 export default function Header(props) {
 
     //funcao de remover as opcoes do dropdown
-    function removeOptions(selectElement) {
-        var i, L = selectElement.options.length - 1;
-        console.log(L)
-        for(i = L; i >= 0; i--) {
-            selectElement.removeChild(selectElement.childNodes[0]);
-        }
-
-    }
-     
-
-    function setBusca(e) {
-
-        axios.get("http://localhost:3001/musicas")
-            .then((res) => {
-                var list = document.getElementById('musicas_procuradas');
-
-                //apaga todas as musicas no dropdown
-                removeOptions(document.getElementById('musicas_procuradas'));
-
-                for (let i in res.data){
-
-                    var cantor = res.data[i]["Cantor"].toLowerCase();
-                    var titulo = res.data[i]["titulo_musica"].toLowerCase();
-
-                    var string_atual = e.toLowerCase();
-                    var option = document.createElement('option')
-
-                    if(cantor.includes(string_atual) == true || titulo.includes(string_atual) == true){
-                        option.value = titulo;
-                        option.label = cantor;
-
-                        list.appendChild(option);
-                    }
-                }
-            })
-            
-    }
+    
 
     return (
         <Navbar bg="black" expand="lg">
