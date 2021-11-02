@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router'
+
+import { useHistory } from 'react-router';
 
 import axios from 'axios'
 
@@ -28,6 +29,7 @@ function EditFormulario() {
     const [visible, setVisible] = useState(false);
     const [erros, setErros] = useState({});
 
+    const history = useHistory()
 
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
@@ -53,7 +55,8 @@ function EditFormulario() {
 
         axios.put(`http://localhost:3001/users/${id}`, dados)
             .then(res => console.log(res.data))
-
+            
+        localStorage.setItem('usuarioLogado', JSON.stringify(dados));
         cor = '#1ab26b'
         text = 'Editado com sucesso!'
 
@@ -64,7 +67,7 @@ function EditFormulario() {
             setVisible(false)
         }, 2000);
 
-        return(<Redirect to="/" />)
+        history.push('/')
 
     }
 

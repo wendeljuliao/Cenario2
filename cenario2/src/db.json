@@ -96,14 +96,65 @@
     {
       "email": "wendelljuliao@hotmail.com",
       "senha": "123",
-      "nome": "wwe",
+      "nome": "123",
+      "dia": "12",
+      "mes": "Fevereiro",
+      "ano": "1111",
+      "sexo": "Feminino",
+      "noticias": true,
+      "termos": true,
+      "playlists": [
+        {
+          "id": 0,
+          "sub": "oi",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": [
+            {
+              "id_musica": 0,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Industry Baby",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/INDUSTRY_BABY.mp3"
+            },
+            {
+              "id_musica": 1,
+              "Cantor": "Rebbeca Sugar",
+              "titulo_musica": "Lofi 01",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/Lofi_01.mp3"
+            }
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "paulo@hotmail.com",
+      "senha": "paulo123",
+      "nome": "paulinho",
       "dia": "22",
       "mes": "Fevereiro",
-      "ano": "2222",
+      "ano": "222",
       "sexo": "Masculino",
       "noticias": true,
       "termos": true,
-      "id": 1
+      "playlists": [
+        {
+          "id": 0,
+          "sub": "aa",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": [
+            {
+              "id_musica": 0,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Industry Baby",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/INDUSTRY_BABY.mp3"
+            }
+          ]
+        }
+      ],
+      "id": 3
     }
   ],
   "playlists": [
