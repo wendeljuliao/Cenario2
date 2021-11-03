@@ -42,52 +42,17 @@
           ]
         },
         {
-          "id": 2,
-          "sub": "ss",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": [
-            {
-              "id_musica": 0,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Industry Baby",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/INDUSTRY_BABY.mp3"
-            },
-            {
-              "id_musica": 7,
-              "Cantor": "Ali",
-              "titulo_musica": "Wild Side",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/Wild_Side.mp3"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "sub": "dd",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
-          "id": 5,
+          "id": 1,
+          "title": "ss",
           "sub": "as",
           "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
-          "id": 6,
-          "sub": "we",
-          "imagem": "/Images/Industry_Baby.png",
           "musicas": [
             {
-              "id_musica": 0,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Industry Baby",
-              "imagem": "./Images/Industry_Baby.png",
-              "musica": "./musicas/INDUSTRY_BABY.mp3"
-            },
-            {
-              "titulo_musica": ""
+              "id_musica": 1,
+              "Cantor": "Rebbeca Sugar",
+              "titulo_musica": "Lofi 01",
+              "imagem": "/icones_musicas/lofi_icon.jpg",
+              "musica": "/musicas/Lofi_01.mp3"
             }
           ]
         }

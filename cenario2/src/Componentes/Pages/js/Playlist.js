@@ -10,15 +10,17 @@ export default function Playlist() {
     const [musicas, setMusicas] = useState([]);
 
     const { id } = useParams();
-    const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-    const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
+
 
     const [logado, setLogado] = useState(false);
+    const [isSave, setIsSave] = useState(false)
     const [isDelete, setIsDelete] = useState(false)
 
     const [musicaEscolhida, setMusicaEscolhida] = useState({ titulo_musica: "" });
 
     useEffect(() => {
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
 
         if (usuario !== null) {
 
@@ -32,9 +34,10 @@ export default function Playlist() {
             setLogado(false)
         }
 
+        setIsSave(false)
         setIsDelete(false)
 
-    }, [usuario, isDelete])
+    }, [isDelete, isSave])
 
 
     function removeOptions(selectElement) {
@@ -90,6 +93,9 @@ export default function Playlist() {
     }
 
     function salvarMusica(e) {
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
+
         e.preventDefault();
 
         console.log(usuario)
@@ -106,18 +112,24 @@ export default function Playlist() {
 
         axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
             .then(res => console.log(res.data))
+
+        setIsSave(true)
     }
 
     function deleteMusic(e, num) {
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
+
         e.preventDefault()
 
-        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
+        console.log(usuario)
 
         for (let i = 0; i < usuario.playlists.length; i++) {
             if (usuario.playlists[i].id == playlist.id) {
                 for (let j = 0; j < usuario.playlists[i].musicas.length; j++) {
                     if (usuario.playlists[i].musicas[j].id_musica == num) {
                         usuario.playlists[i].musicas.splice(j, 1)
+
                         break
                     }
 
@@ -125,8 +137,9 @@ export default function Playlist() {
             }
         }
 
-
         localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
+        
+        console.log(usuario)
 
         console.log("...")
         axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
@@ -146,9 +159,8 @@ export default function Playlist() {
                             <img src={element.imagem} style={{ width: "100px", height: "100px", objectFit: "cover", marginRight: 10, borderRadius: 10 }} />
                             <div className="d-flex align-items-center justify-content-center flex-row m-2" style={{ width: "80%" }}>
                                 <div className="w-100">
-                                    <label style={{ width: "600px"}}>{element.titulo_musica}</label>
+                                    <label style={{ width: "600px" }}>{element.titulo_musica}</label>
                                     <audio controls className="w-100"> <source src={element.musica} type="audio/mp3"></source></audio>
-                                    {console.log(element)}
                                 </div>
                                 {logado ?
                                     <a onClick={(e) => deleteMusic(e, element.id_musica)}><img src="/Images/close_icon.png" style={{ width: '30px', height: 'auto' }} /></a>
