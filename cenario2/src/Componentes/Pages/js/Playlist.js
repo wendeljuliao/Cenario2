@@ -138,7 +138,7 @@ export default function Playlist() {
         }
 
         localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-        
+
         console.log(usuario)
 
         console.log("...")
@@ -147,6 +147,8 @@ export default function Playlist() {
         console.log("...")
 
         setIsDelete(true)
+        
+        window.location.reload()
 
     }
 

@@ -48,11 +48,11 @@
           "imagem": "/Images/Industry_Baby.png",
           "musicas": [
             {
-              "id_musica": 1,
-              "Cantor": "Rebbeca Sugar",
-              "titulo_musica": "Lofi 01",
-              "imagem": "/icones_musicas/lofi_icon.jpg",
-              "musica": "/musicas/Lofi_01.mp3"
+              "id_musica": 3,
+              "Cantor": "Sebastien -NicolArmarfi-",
+              "titulo_musica": "Wiosna",
+              "imagem": "/icones_musicas/wiosona_icon.jpg",
+              "musica": "/musicas/Wiosna.mp3"
             }
           ]
         }
