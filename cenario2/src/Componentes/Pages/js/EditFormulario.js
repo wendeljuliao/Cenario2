@@ -50,12 +50,12 @@ function EditFormulario(props) {
     async function editarCampos(e) {
         e.preventDefault()
 
-        let dados = { id, email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists}
+        let dados = { id, email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists }
 
 
         axios.put(`http://localhost:3001/users/${id}`, dados)
             .then(res => console.log(res.data))
-            
+
         localStorage.setItem('usuarioLogado', JSON.stringify(dados));
         cor = '#1ab26b'
         text = 'Editado com sucesso!'
@@ -67,8 +67,10 @@ function EditFormulario(props) {
             setVisible(false)
         }, 2000);
 
-        
-        history.push('/')
+
+        setTimeout(() => {
+            history.push('/')
+        }, 2000);
 
     }
 

@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 0,
-      "email": "joao@hotmail.com",
+      "email": "teste@hotmail.com",
       "senha": "123",
-      "nome": "João",
+      "nome": "teste",
       "dia": "01",
       "mes": "Abril",
       "ano": "2000",
@@ -40,111 +40,25 @@
               "musica": "/musicas/Lofi_01.mp3"
             }
           ]
-        },
-        {
-          "id": 1,
-          "title": "ss",
-          "sub": "as",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": [
-            {
-              "id_musica": 3,
-              "Cantor": "Sebastien -NicolArmarfi-",
-              "titulo_musica": "Wiosna",
-              "imagem": "/icones_musicas/wiosona_icon.jpg",
-              "musica": "/musicas/Wiosna.mp3"
-            }
-          ]
         }
       ]
     },
     {
-      "email": "paulo123@gmail.com",
-      "senha": "12345",
-      "nome": "paulinho 2",
-      "dia": "11",
-      "mes": "Outubro",
-      "ano": "1999",
-      "sexo": "Feminino",
-      "noticias": true,
-      "termos": true,
-      "playlists": [
-        {
-          "id": 0,
-          "sub": "sim",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        }
-      ],
-      "id": 3
-    },
-    {
-      "id": 4,
-      "email": "paulo@hotmail.com",
+      "id": 1,
+      "email": "wendelljuliao@hotmail.com",
       "senha": "123",
-      "nome": "paulo",
-      "dia": "ww",
+      "nome": "wendel",
+      "dia": "01",
       "mes": "Janeiro",
-      "ano": "ww",
+      "ano": "1990",
       "sexo": "Masculino",
       "noticias": true,
       "termos": true,
       "playlists": [
         {
           "id": 0,
-          "title": "ao",
-          "sub": "123",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": [
-            {
-              "id_musica": 0,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Industry Baby",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/INDUSTRY_BABY.mp3"
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "123",
-          "sub": "123",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": [
-            {
-              "id_musica": 0,
-              "Cantor": "Lil Nas X",
-              "titulo_musica": "Industry Baby",
-              "imagem": "/Images/Industry_Baby.png",
-              "musica": "/musicas/INDUSTRY_BABY.mp3"
-            },
-            {
-              "id_musica": 3,
-              "Cantor": "Sebastien -NicolArmarfi-",
-              "titulo_musica": "Wiosna",
-              "imagem": "/icones_musicas/wiosona_icon.jpg",
-              "musica": "/musicas/Wiosna.mp3"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "aa",
-          "sub": "aa",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
-          "id": 4,
-          "title": "aa",
-          "sub": "as",
-          "imagem": "/Images/Industry_Baby.png",
-          "musicas": []
-        },
-        {
-          "id": 5,
-          "title": "as",
-          "sub": "as",
+          "title": "op",
+          "sub": "op",
           "imagem": "/Images/Industry_Baby.png",
           "musicas": []
         }
