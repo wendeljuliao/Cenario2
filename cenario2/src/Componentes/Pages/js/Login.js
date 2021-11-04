@@ -41,7 +41,7 @@ export default function Login(props) {
                     </div>
 
                     <div className="inputField d-flex align-items-start flex-column">
-                        <label>Crie uma senha</label>
+                        <label>Digite uma senha</label>
                         <input required type="password" class="bg-transparent border-0" value={senha}
                             onChange={(e) => setSenha(e.target.value)} style={{ width: "100%" }} />
                     </div>
