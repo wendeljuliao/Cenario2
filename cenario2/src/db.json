@@ -63,6 +63,49 @@
           "musicas": []
         }
       ]
+    },
+    {
+      "id": 2,
+      "email": "oi@hotmail.com",
+      "senha": "123",
+      "nome": "oiiii 2",
+      "dia": "11",
+      "mes": "Janeiro",
+      "ano": "1990",
+      "sexo": "Masculino",
+      "noticias": true,
+      "termos": true,
+      "playlists": [
+        {
+          "id": 0,
+          "title": "wendel",
+          "sub": "wwww",
+          "imagem": "/Images/Industry_Baby.png",
+          "musicas": [
+            {
+              "id_musica": 4,
+              "Cantor": "Ali",
+              "titulo_musica": "Lost in Paradise",
+              "imagem": "/icones_musicas/lost_in_paradise_icon.png",
+              "musica": "/musicas/Lost_in_paradise.mp3"
+            },
+            {
+              "id_musica": 0,
+              "Cantor": "Lil Nas X",
+              "titulo_musica": "Industry Baby",
+              "imagem": "/Images/Industry_Baby.png",
+              "musica": "/musicas/INDUSTRY_BABY.mp3"
+            },
+            {
+              "id_musica": 3,
+              "Cantor": "Sebastien -NicolArmarfi-",
+              "titulo_musica": "Wiosna",
+              "imagem": "/icones_musicas/wiosona_icon.jpg",
+              "musica": "/musicas/Wiosna.mp3"
+            }
+          ]
+        }
+      ]
     }
   ],
   "playlists": [

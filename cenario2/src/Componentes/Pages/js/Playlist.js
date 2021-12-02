@@ -20,18 +20,20 @@ export default function Playlist() {
 
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
 
-        if (usuario !== null) {
 
-            setMusicas(playlist.musicas)
-
-            setLogado(true)
-        } else {
-            axios.get("http://localhost:3001/playlists")
-                .then((res) => setMusicas(res.data[id].musicas))
+        if (usuario === undefined) {
+            axios.get(`http://localhost:3001/playlists/${id}`)
+                .then((res) => {
+                    setMusicas(res.data.musicas)
+                })
 
             setLogado(false)
+        } else {
+            axios.get(`http://localhost:3001/users/${usuario._id}/playlists/${id}`)
+                .then((res) => setMusicas(res.data.musicas))
+
+            setLogado(true)
         }
 
         setIsSave(false)
@@ -93,62 +95,39 @@ export default function Playlist() {
     }
 
     function salvarMusica(e) {
-        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
-
         e.preventDefault();
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
-        console.log(usuario)
+        axios.post(`http://localhost:3001/users/${usuario._id}/playlists/${id}/musicas`, musicaEscolhida)
+            .then((res) => {
+                console.log(res.data)
+                usuario.playlists.find((p) => p.id === parseInt(id)).musicas.push(musicaEscolhida)
+                localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+                setIsSave(true)
 
-        for (let i = 0; i < usuario.playlists.length; i++) {
-            if (usuario.playlists[i].id == playlist.id) {
-                usuario.playlists[i].musicas.push(musicaEscolhida)
-            }
-        }
 
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-        //axios.post(`http://localhost:3001/playlists`, dados)
-        //    .then(res => console.log(res.data))
+            });
 
-        axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
-            .then(res => console.log(res.data))
-
-        setIsSave(true)
     }
 
     function deleteMusic(e, num) {
-        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-        const playlist = usuario != undefined ? usuario.playlists.find((p) => p.id == id) : null;
-
         e.preventDefault()
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
-        console.log(usuario)
+        axios.delete(`http://localhost:3001/users/${usuario._id}/playlists/${id}/musicas/${num}`)
+            .then((res) => {
+                console.log(res.data)
+                setIsDelete(true)
+                axios.get(`http://localhost:3001/users/${usuario._id}`)
+                    .then((res) => {
+                        localStorage.setItem('usuarioLogado', JSON.stringify(res.data));
+                        window.location.reload()
 
-        for (let i = 0; i < usuario.playlists.length; i++) {
-            if (usuario.playlists[i].id == playlist.id) {
-                for (let j = 0; j < usuario.playlists[i].musicas.length; j++) {
-                    if (usuario.playlists[i].musicas[j].id_musica == num) {
-                        usuario.playlists[i].musicas.splice(j, 1)
+                    })
 
-                        break
-                    }
+            });
 
-                }
-            }
-        }
 
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-
-        console.log(usuario)
-
-        console.log("...")
-        axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
-            .then((res) => { console.log(res.data) })
-        console.log("...")
-
-        setIsDelete(true)
-        
-        window.location.reload()
 
     }
 

@@ -25,8 +25,7 @@ export default function Home(props) {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
         if (usuario !== null) {
 
-            axios.get(`http://localhost:3001/users?email=${usuario.email}`)
-                .then((res) => setPlaylists(res.data[0].playlists))
+            setPlaylists(usuario.playlists)
 
             setLogado(true)
 
@@ -50,30 +49,28 @@ export default function Home(props) {
 
         if (title.length > 0) {
             const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-            console.log(usuario)
-            var id = 0;
-
-            if (usuario.playlists.length > 0) {
-                id = usuario.playlists[usuario.playlists.length - 1].id + 1
+            let auxId = 0;
+            if (usuario.playlists.length == 0) {
+                auxId = 0;
+            } else {
+                auxId =  usuario.playlists[usuario.playlists.length - 1].id + 1;
             }
+            
+            let dados = { id: auxId, title: title, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
+            axios.post(`http://localhost:3001/users/${usuario._id}/playlists`, dados)
+                .then((res) => {
+                    console.log(res.data)
+                    usuario.playlists.push(dados);
+                    localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+                    settitle("")
+                    setsub("")
+                    setimagem("")
+                    cor = '#1ab26b'
+                    text = 'Playlist cadastrada com sucesso!'
+                    window.location.reload()
 
-            let dados = { id: id, title: title, sub, imagem: "/Images/Industry_Baby.png", musicas: [] }
 
-            usuario.playlists.push(dados)
-
-            localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-            //axios.post(`http://localhost:3001/playlists`, dados)
-            //    .then(res => console.log(res.data))
-
-            axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
-                .then(res => console.log(res.data))
-
-            settitle("")
-            setsub("")
-            setimagem("")
-            cor = '#1ab26b'
-            text = 'Playlist cadastrada com sucesso!'
-
+                });
 
             setIsModalVisible(false)
             setIsSave(true)

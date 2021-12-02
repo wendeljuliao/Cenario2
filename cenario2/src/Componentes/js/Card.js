@@ -26,23 +26,19 @@ export default class Card extends Component {
         e.preventDefault()
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
+        axios.delete(`http://localhost:3001/users/${usuario._id}/playlists/${num}`)
+        .then((res) => {
+            console.log(res.data)
+            isDelete(true)
+            axios.get(`http://localhost:3001/users/${usuario._id}`)
+                .then((res) => {
+                    localStorage.setItem('usuarioLogado', JSON.stringify(res.data));
+                    window.location.reload()
 
-        for (let i = 0; i < usuario.playlists.length; i++) {
-            if (usuario.playlists[i].id === num) {
-                usuario.playlists.splice(i, 1)
-                break
-            }
-        }
+                })
 
+        });
 
-        localStorage.setItem('usuarioLogado', JSON.stringify(usuario))
-
-        console.log("...")
-        axios.put(`http://localhost:3001/users/${usuario.id}`, usuario)
-            .then((res) => { console.log(res.data) })
-        console.log("...")
-
-        isDelete(true)
 
     }
 

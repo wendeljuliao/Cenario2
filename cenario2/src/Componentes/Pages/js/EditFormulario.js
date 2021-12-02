@@ -33,7 +33,7 @@ function EditFormulario(props) {
 
     useEffect(() => {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
-        setID(usuario.id)
+        setID(usuario._id)
         setEmail(usuario.email)
         setSenha(usuario.senha)
         setNome(usuario.nome)
@@ -50,13 +50,13 @@ function EditFormulario(props) {
     async function editarCampos(e) {
         e.preventDefault()
 
-        let dados = { id, email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists }
+        let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists }
 
 
-        axios.put(`http://localhost:3001/users/${id}`, dados)
+        axios.put(`http://localhost:3001/users/update/${id}`, dados)
             .then(res => console.log(res.data))
 
-        localStorage.setItem('usuarioLogado', JSON.stringify(dados));
+        localStorage.setItem('usuarioLogado', JSON.stringify({id, ...dados}));
         cor = '#1ab26b'
         text = 'Editado com sucesso!'
 

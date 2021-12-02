@@ -26,6 +26,7 @@ export default function Login(props) {
                     localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
                     props.setLogin(true)
 
+                    
                     history.push('/')
                 }
             })
