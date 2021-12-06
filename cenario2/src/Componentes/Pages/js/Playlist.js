@@ -22,7 +22,7 @@ export default function Playlist() {
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
 
-        if (usuario === undefined) {
+        if (usuario === null) {
             axios.get(`http://localhost:3001/playlists/${id}`)
                 .then((res) => {
                     setMusicas(res.data.musicas)

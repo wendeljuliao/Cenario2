@@ -102,7 +102,7 @@ export default function Home(props) {
 
                         {playlists.map((item) => {
                             return (
-                                <Link style={{ width: 390 }} to={`/playlist/${item.id}`}><Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} setIsDelete={setIsDelete} logado={logado} /></Link>
+                                (logado == false ? <Link style={{ width: 390 }} to={`/playlist/${item._id}`}><Card key={item._id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} setIsDelete={setIsDelete} logado={logado} /></Link> : <Link style={{ width: 390 }} to={`/playlist/${item.id}`}><Card key={item.id} title={item.title} sub={item.sub} bgimg={item.imagem} num={item.id} setIsDelete={setIsDelete} logado={logado} /></Link>)
                             )
                         }
                         )}
