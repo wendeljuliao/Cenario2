@@ -98,16 +98,17 @@ export default function Playlist() {
         e.preventDefault();
         const usuario = JSON.parse(localStorage.getItem('usuarioLogado'))
 
-        axios.post(`http://localhost:3001/users/${usuario._id}/playlists/${id}/musicas`, musicaEscolhida)
-            .then((res) => {
-                console.log(res.data)
-                usuario.playlists.find((p) => p.id === parseInt(id)).musicas.push(musicaEscolhida)
-                localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-                setIsSave(true)
+        if (musicaEscolhida.titulo_musica != "") {
+            axios.post(`http://localhost:3001/users/${usuario._id}/playlists/${id}/musicas`, musicaEscolhida)
+                .then((res) => {
+                    console.log(res.data)
+                    usuario.playlists.find((p) => p.id === parseInt(id)).musicas.push(musicaEscolhida)
+                    localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+                    setIsSave(true)
 
 
-            });
-
+                });
+        }
     }
 
     function deleteMusic(e, num) {
