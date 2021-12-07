@@ -14,7 +14,7 @@ var cor;
 var text;
 
 function EditFormulario(props) {
-    const [id, setID] = useState('');
+    const [_id, setID] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [nome, setNome] = useState('');
@@ -53,10 +53,10 @@ function EditFormulario(props) {
         let dados = { email, senha, nome, dia, mes, ano, sexo, noticias, termos, playlists }
 
 
-        axios.put(`http://localhost:3001/users/update/${id}`, dados)
+        axios.put(`http://localhost:3001/users/update/${_id}`, dados)
             .then(res => console.log(res.data))
 
-        localStorage.setItem('usuarioLogado', JSON.stringify({id, ...dados}));
+        localStorage.setItem('usuarioLogado', JSON.stringify({_id, ...dados}));
         cor = '#1ab26b'
         text = 'Editado com sucesso!'
 
